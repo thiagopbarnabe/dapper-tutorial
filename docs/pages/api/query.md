@@ -9,6 +9,13 @@ permalink: query
 ## Description
 Execute a SQL and return the result.
 
+The result can be from different type:
+- [Anonymous](#query-anonymous)
+- [Strongly Typed](#query-strongly-typed)
+- [Multi-Mapping](#query-multi-mapping)
+- [Multi-Result](#query-multi-result)
+- [Multi-Type](#query-multi-type)
+
 ### Overloads
 
 {% highlight csharp %}
