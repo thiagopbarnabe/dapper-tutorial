@@ -34,11 +34,66 @@ IEnumerable<TReturn> Query<TReturn>(this IDbConnection cnn, string sql, Type[] t
 {% endhighlight %}
 
 ## Query Anonymous
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+{
+    // SET BatchSize value.
+    bulkCopy.BatchSize = 4000;
+
+    bulkCopy.DestinationTableName = "TheDestinationTable";
+    bulkCopy.WriteToServer(dt);
+}
+{% endhighlight %}
 
 ## Query Strongly Typed
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+{
+    // SET BatchSize value.
+    bulkCopy.BatchSize = 4000;
+
+    bulkCopy.DestinationTableName = "TheDestinationTable";
+    bulkCopy.WriteToServer(dt);
+}
+{% endhighlight %}
 
 ## Query Multi-Mapping
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+{
+    // SET BatchSize value.
+    bulkCopy.BatchSize = 4000;
+
+    bulkCopy.DestinationTableName = "TheDestinationTable";
+    bulkCopy.WriteToServer(dt);
+}
+{% endhighlight %}
 
 ## Query Multi-Result
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+{
+    // SET BatchSize value.
+    bulkCopy.BatchSize = 4000;
+
+    bulkCopy.DestinationTableName = "TheDestinationTable";
+    bulkCopy.WriteToServer(dt);
+}
+{% endhighlight %}
 
 ## Query Multi-Type
+{% include template-example.html %} 
+{% highlight csharp %}
+using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
+{
+    // SET BatchSize value.
+    bulkCopy.BatchSize = 4000;
+
+    bulkCopy.DestinationTableName = "TheDestinationTable";
+    bulkCopy.WriteToServer(dt);
+}
+{% endhighlight %}
