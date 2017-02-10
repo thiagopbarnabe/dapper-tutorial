@@ -5,12 +5,12 @@ layout: default
 <div class="row">
 	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
-			<h2 class="display-4">SqlBulkCopy</h2>
+			<h2 class="display-4">Dapper</h2>
 			<p class="lead">Dapper Tutotrial</p>
 			<hr class="my-4">
 			<p>Start learning about how to use Dapper with our tutorial.</p>
 			<p class="lead">
-				<a class="btn btn-primary btn-lg" href="sqlbulkcopy" role="button">Learn more</a>
+				<a class="btn btn-primary btn-lg" href="dapper" role="button">Learn more</a>
 			</p>
 		</div>
 	</div>
@@ -21,7 +21,7 @@ layout: default
 			<hr class="my-4">
 			<p>Start learning the common API of Dapper, and everything around it.</p>
 			<p class="lead">
-				<a class="btn btn-primary btn-lg" href="sqlbulkcopy" role="button">Learn more</a>
+				<a class="btn btn-primary btn-lg" href="dapper" role="button">Learn more</a>
 			</p>
 		</div>
 	</div>
