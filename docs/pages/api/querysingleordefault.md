@@ -17,6 +17,8 @@ The result can be from different type:
 - [Multi-Result](#query-multi-result)
 - [Multi-Type](#query-multi-type)
 
+> FirstOrDefault vs SingleOrDefault: FirstOrDefault return the first element of a sequence or default value if the sequence contain no element. SingleOrDefault throw an exception if more than 1 element is found in the sequence.
+
 ### Query Overloads
 
 {% highlight csharp %}
