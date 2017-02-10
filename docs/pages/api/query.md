@@ -17,7 +17,7 @@ The result can be from different type:
 - [Multi-Result](#query-multi-result)
 - [Multi-Type](#query-multi-type)
 
-### Overloads
+### Query Overloads
 
 {% highlight csharp %}
 IEnumerable<object> Query(this IDbConnection cnn, string sql, object param = null, IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, CommandType? commandType = null)
