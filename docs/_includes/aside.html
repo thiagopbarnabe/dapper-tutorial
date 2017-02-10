@@ -1,25 +1,109 @@
 {% if page.path contains "/api/" %}
-<ul class="list-group">
-	<li class="list-group-item list-group-item-action"><a href="query">Query</a></li>
-	<li class="list-group-item list-group-item-action"><a href="queryfirst">QueryFirst</a></li>
-	<li class="list-group-item list-group-item-action"><a href="queryfirstordefault">QueryFirstOrDefault</a></li>
-	<li class="list-group-item list-group-item-action"><a href="querysingle">QuerySingle</a></li>
-	<li class="list-group-item list-group-item-action"><a href="querysingleordefault">QuerySIngleOrDefault</a></li>
-	
-	
-	<li class="list-group-item list-group-item-info">API</li>
-	<li class="list-group-item list-group-item-action"><a href="sqlbulkcopy">SqlBulkCopy</a></li>
-	<li class="list-group-item list-group-item-info">Options</li>
-	<li class="list-group-item list-group-item-action"><a href="sqlbulkcopyoptions">SqlBulkCopyOptions</a></li>
-	<li class="list-group-item list-group-item-info">Properties</li>
+<div class="card">
+	<div class="card-header">
+		<h3>Dapper - API</h3>
+	</div>
+	<div class="card-block">
 
-	<li class="list-group-item list-group-item-action"><a href="notifyafter">NotifyAfter</a></li>
-	<li class="list-group-item list-group-item-info">Methods</li>
-	<li class="list-group-item list-group-item-action"><a href="writetoserver">WriteToServer</a></li>
-	<li class="list-group-item list-group-item-action"><a href="writetoserverasync">WrtieToServerAsync</a></li>
-	<li class="list-group-item list-group-item-info">Events</li>
-	<li class="list-group-item list-group-item-action"><a href="sqlrowscopied">SqlRowsCopied</a></li>
-</ul>
+		<h4>Getting Started</h4>
+		<ul>
+			<li><a href="introduction">Introduction</a></li>
+		</ul>
+
+		<h4>Query</h4>
+		<ul>
+			<li><a href="query">Query</a></li>
+			<li><a href="query-first">QueryFirst</a></li>
+			<li><a href="query-first-or-default">QueryFirstOrDefault</a></li>
+			<li><a href="query-single">QuerySingle</a></li>
+			<li><a href="query-single-or-default">QuerySingleOrDefault</a></li>
+		</ul>
+					
+		<h4>Execute</h4>
+		<ul>
+			<li><a href="execute-single">Single Time</a></li>
+			<li><a href="execute-many">Multiple Times</a></li>
+		</ul>
+
+		<h4>Parameter</h4>
+		<ul>
+			<li><a href="parameter-anonymous">Anonymous</a></li>
+			<li><a href="parameter-dynamic">Dynamic Parameter</a></li>
+			<li><a href="parameter-list">List</a></li>
+			<li><a href="parameter-string">String</a></li>
+		</ul>
+
+		<h4>Result Type</h4>
+		<ul>
+			<li><a href="result-anonymous">Anonymous</a></li>
+			<li><a href="result-strongly-typed">Strongly Type</a></li>
+			<li><a href="result-multi-mapping">Multi-Mapping</a></li>
+			<li><a href="result-multi-result">Multi-Result</a></li>
+			<li><a href="result-multi-type">Multi-Type</a></li>
+		</ul>
+		
+		<h4>Stored Procedure</h4>
+		<ul>
+			<li><a href="stored-procedure">Stored Procedure</a></li>
+		</ul>
+
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-header">
+		<h3>Dapper Plus - API</h3>
+	</div>
+	<div class="card-block">
+
+		<h4>Getting Started</h4>
+		<ul>
+			<li><a href="introduction">Introduction</a></li>
+		</ul>
+
+		<h4>Methods</h4>
+		<ul>
+			<li><a href="bulk-insert">BulkInsert</a></li>
+			<li><a href="bulk-update">BulkUpdate</a></li>
+			<li><a href="bulk-delete">BulkDelete</a></li>
+			<li><a href="bulk-merge">BulkMerge</a></li>
+		</ul>
+
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-header">
+		<h3>Dapper Contrib - API</h3>
+	</div>
+	<div class="card-block">
+
+		<h4>Getting Started</h4>
+		<ul>
+			<li><a href="introduction">Introduction</a></li>
+		</ul>
+
+		<h4>Methods</h4>
+		<ul>
+			<li><a href="get">Get</a></li>
+			<li><a href="get-all">GetAll</a></li>
+			<li><a href="insert">Insert</a></li>
+			<li><a href="update">Update</a></li>
+			<li><a href="delete">Delete</a></li>
+			<li><a href="delete-all">DeleteAll</a></li>
+		</ul>
+		
+		<h4>DataAnnotations</h4>
+		<ul>
+			<li><a href="annotation-key">Key</a></li>
+			<li><a href="annotation-explicit-key">ExplicitKey</a></li>
+			<li><a href="annotation-table">Table</a></li>
+			<li><a href="annotation-write">Write</a></li>
+			<li><a href="annotation-computed">Computed</a></li>
+		</ul>
+
+	</div>
+</div>
 
 {% elsif page.path contains "/examples/" %}
 <ul class="list-group">
