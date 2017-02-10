@@ -6,7 +6,10 @@ permalink: query
 
 {% include template-h1.html %}
 
-## Overloads
+## Description
+Execute a SQL and return the result.
+
+### Overloads
 
 {% highlight csharp %}
 IEnumerable<object> Query(this IDbConnection cnn, string sql, object param = null, IDbTransaction transaction = null, bool buffered = true, int? commandTimeout = null, CommandType? commandType = null)
