@@ -7,7 +7,7 @@ permalink: query
 {% include template-h1.html %}
 
 ## Description
-Execute a SQL and return the first item.
+Execute a SQL and return an IEnumerable.
 
 The result can be from different type:
 
