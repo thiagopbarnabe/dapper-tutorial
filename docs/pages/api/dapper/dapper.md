@@ -19,7 +19,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 }
 {% endhighlight %}
 
-{% include begin-block-h2.html title='Options' %}
+
 <table class="table table-striped table-hover table-responsive">
 	<thead>
 		<th>Name</th>
@@ -32,9 +32,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 		</tr>
 	</tbody>
 </table>
-{% include end-block-h2.html %}
 
-{% include begin-block-h2.html title='Properties' %}
 <table class="table table-striped table-hover table-responsive">
 	<thead>
 		<th>Name</th>
@@ -67,9 +65,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 		</tr>
 	</tbody>
 </table>
-{% include end-block-h2.html %}
 
-{% include begin-block-h2.html title='Methods' %}
 <table class="table table-striped table-hover table-responsive">
 	<thead>
 		<th>Name</th>
@@ -86,9 +82,7 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 		</tr>
 	</tbody>
 </table>
-{% include end-block-h2.html %}
 
-{% include begin-block-h2.html title='Events' %}
 <table class="table table-striped table-hover table-responsive">
 	<thead>
 		<th>Name</th>
@@ -101,4 +95,4 @@ using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
 		</tr>
 	</tbody>
 </table>
-{% include end-block-h2.html %}
+
