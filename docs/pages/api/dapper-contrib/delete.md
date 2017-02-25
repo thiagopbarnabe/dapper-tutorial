@@ -6,6 +6,7 @@ permalink: delete
 
 {% include template-h1.html %}
 
+## Description
 DELETE a single or many entities.
 
 - [Delete Single](#example---delete-single)
