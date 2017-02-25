@@ -15,6 +15,7 @@ The result can be mapped to:
 - [Strongly Typed](#example---query-strongly-typed)
 
 ### First, Single & Default
+
 | Result          | None      | Single | Many       |
 | :-------------- | :-------: | :----: | :--------: |
 | First           | Exception | Item   | First Item |
