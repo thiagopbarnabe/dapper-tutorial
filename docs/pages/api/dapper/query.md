@@ -46,7 +46,7 @@ example
 {% endhighlight %}
 
 ## Example - Query Multi-Type
-Execute a query and map the result to different strongly typed object.
+Execute a query and map the result to a list with multiple different types.
 
 {% highlight csharp %}
 example
