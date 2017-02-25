@@ -25,6 +25,10 @@ Dapper will extend your IDbConnection interface with multiple methods:
 - [QuerySingleOrDefault](/querysingleordefault)
 - [QueryMultiple](/querymultiple)
 
+{% highlight csharp %}
+example
+{% endhighlight %}
+
 ## Parameter
 Execute and queries method can use parameter from different way:
 
@@ -32,6 +36,10 @@ Execute and queries method can use parameter from different way:
 - [Dynamic](/parameter-dynamic)
 - [List](/parameter-list)
 - [String](/parameter-string)
+
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ## Result
 The result returned by queries method can be mapped to multiple type:
@@ -42,6 +50,14 @@ The result returned by queries method can be mapped to multiple type:
 - [Multi-Result](/result-multi-result)
 - [Multi-Type](/result-multi-type)
 
+{% highlight csharp %}
+example
+{% endhighlight %}
+
 ## Utilities
 
 - [Stored Procedure](stored-procedure)
+
+{% highlight csharp %}
+example
+{% endhighlight %}
