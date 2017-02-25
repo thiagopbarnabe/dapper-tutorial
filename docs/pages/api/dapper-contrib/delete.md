@@ -8,6 +8,9 @@ permalink: delete
 
 DELETE a single or many entities.
 
+- [Delete Single](#example---delete-single)
+- [Delete Many](#example---delete-single)
+
 ## Example - Delete Single
 DELETE a single entitiy.
 
