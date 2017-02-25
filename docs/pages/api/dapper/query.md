@@ -19,12 +19,14 @@ The result can be from different type:
 - [Multi-Type](#example---query-multi-type)
 
 ## Example - Query Anonymous
+Execute a query and map the result to a dynamic list.
 
 {% highlight csharp %}
 example
 {% endhighlight %}
 
 ## Example - Query Strongly Typed
+Execute a query and map the result to a strongly typed list.
 
 {% highlight csharp %}
 example
@@ -32,11 +34,21 @@ example
 
 ## Example - Query Multi-Mapping
 
+### One to One
+Execute a query and map the result to a strongly typed list with a one to one relation.
+
+{% highlight csharp %}
+example
+{% endhighlight %}
+
+### One to many
+Execute a query and map the result to a strongly typed list with a one to many relation.
 {% highlight csharp %}
 example
 {% endhighlight %}
 
 ## Example - Query Multi-Type
+Execute a query and map the result to different strongly typed object.
 
 {% highlight csharp %}
 example
