@@ -12,7 +12,7 @@ Dapper is a simple object mapper for .NET
 A lot of people call this library "**King of Micro ORM**".
 
 ## Installation
-Dapper is installed throught NuGet: https://www.nuget.org/packages/Dapper
+Dapper is installed through NuGet: https://www.nuget.org/packages/Dapper
 
 ## Requirement
 Dapper work with any database provider since there is no DB specific implementation.
@@ -33,7 +33,7 @@ example
 {% endhighlight %}
 
 ## Parameter
-Execute and queries method can use parameter from different way:
+Execute and queries method can use parameters from multiple different ways:
 
 - [Anonymous](/parameter-anonymous)
 - [Dynamic](/parameter-dynamic)
@@ -45,7 +45,7 @@ example
 {% endhighlight %}
 
 ## Result
-The result returned by queries method can be mapped to multiple type:
+The result returned by queries method can be mapped to multiple types:
 
 - [Anonymous](/result-anonymous)
 - [Strongly Typed](/result-strongly-typed)
