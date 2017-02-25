@@ -8,14 +8,17 @@ permalink: update
 
 UPDATE a single or many entities.
 
-## Example - UPDATE Single
+- [Update Single](#example---update-single)
+- [Update Many](#example---update-single)
+
+## Example - Update Single
 UPDATE a single entitiy.
 
 {% highlight csharp %}
 example
 {% endhighlight %}
 
-## Example - UPDATE Many
+## Example - Update Many
 UPDATE many entities.
 
 {% highlight csharp %}
