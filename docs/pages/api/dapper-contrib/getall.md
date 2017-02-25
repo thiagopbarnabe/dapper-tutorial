@@ -5,3 +5,5 @@ permalink: getall
 ---
 
 {% include template-h1.html %}
+
+Get all entities.
