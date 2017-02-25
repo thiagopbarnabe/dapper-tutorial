@@ -14,6 +14,14 @@ The result can be mapped to:
 - [Anonymous](#example---query-anonymous)
 - [Strongly Typed](#example---query-strongly-typed)
 
+### First, Single & Default
+| Result          | None      | Single | Many       |
+| :-------------- | :-------: | :----: | :--------: |
+| First           | Exception | Item   | First Item |
+| FirstOrDefault  | Default   | Item   | First Item |
+| Single          | Exception | Item   | Exception  |
+| SingleOrDefault | Default   | Item   | Exception  |
+
 ## Example - Query Anonymous
 Execute a query and map the first result to a dynamic list.
 
