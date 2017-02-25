@@ -14,6 +14,9 @@ A lot of people call this library "**King of Micro ORM**".
 ## Installation
 Dapper is installed throught NuGet: https://www.nuget.org/packages/Dapper
 
+## Requirement
+Dapper work with any database provider since there is no DB specific implementation.
+
 ## Methods
 Dapper will extend your IDbConnection interface with multiple methods:
 
