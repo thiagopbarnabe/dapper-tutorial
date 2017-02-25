@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dapper Contrib - Key
+title: Dapper Contrib - Data Annotation - Key
 permalink: data-annotation-key
 ---
 
