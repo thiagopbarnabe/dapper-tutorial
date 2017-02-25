@@ -15,11 +15,15 @@ Execute method allow you to execute a SQL Command and return the number of affec
 ## Example - Stored Procedure
 
 ### Single
+Execute the Stored Procedure a single time.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
 
 ### Many
+Execute the Stored Procedure multiple times. Once for every object in the array list.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
@@ -27,11 +31,15 @@ example
 ## Example - INSERT
 
 ### Single
+Execute the INSERT Statement a single time.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
 
 ### Many
+Execute the INSERT Statement multiple times. Once for every object in the array list.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
@@ -39,11 +47,15 @@ example
 ## Example - UPDATE
 
 ### Single
+Execute the UPDATE Statement a single time.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
 
 ### Many
+Execute the UPDATE Statement multiple times. Once for every object in the array list.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
@@ -51,11 +63,15 @@ example
 ## Example - DELETE
 
 ### Single
+Execute the DELETE Statement a single time.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
 
 ### Many
+Execute the DELETE Statement multiple times. Once for every object in the array list.
+
 {% highlight csharp %}
 example
 {% endhighlight %}
