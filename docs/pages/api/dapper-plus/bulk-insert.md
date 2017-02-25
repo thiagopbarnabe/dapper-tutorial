@@ -1,5 +1,5 @@
 ---
 layout: default
 title: Dapper Plus - Bulk Insert
-permalink: bulkinsert
+permalink: bulk-insert
 ---
