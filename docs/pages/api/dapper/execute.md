@@ -6,6 +6,7 @@ permalink: execute
 
 {% include template-h1.html %}
 
+## Description
 Execute a command one or multiple times and return the number of affected rows. This method is usually used to execute:
 - [Stored Procedure](#example---execute-stored-procedure)
 - [INSERT statement](#example---execute-insert)
