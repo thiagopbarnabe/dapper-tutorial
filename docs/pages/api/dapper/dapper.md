@@ -14,24 +14,28 @@ A lot of people call this library "**King of Micro ORM**".
 ## Installation
 Dapper is installed thought NuGet: https://www.nuget.org/packages/Dapper
 
-Dapper will extend your IDbConnection interface with multiple methods.
-
 ## Methods
+Dapper will extend your IDbConnection interface with multiple methods:
+
 - [Execute](/execute)
 - [Query](/query)
 - [QueryFirst](/queryfirst)
 - [QueryFirstOrDefault](/queryfirstordefault)
 - [QuerySingle](/querysingle)
 - [QuerySingleOrDefault](/querysingleordefault)
-- [Query Multiple](/querymultiple)
+- [QueryMultiple](/querymultiple)
 
 ## Parameter
+Execute and queries method can use parameter from different way:
+
 - [Anonymous](/parameter-anonymous)
 - [Dynamic](/parameter-dynamic)
 - [List](/parameter-list)
 - [String](/parameter-string)
 
 ## Result
+The result returned by queries method can be mapped to multiple type:
+
 - [Anonymous](/result-anonymous)
 - [Strongly Typed](/result-strongly-typed)
 - [Multi-Mapping](/result-multi-mapping)
@@ -39,4 +43,5 @@ Dapper will extend your IDbConnection interface with multiple methods.
 - [Multi-Type](/result-multi-type)
 
 ## Utilities
+
 - [Stored Procedure](stored-procedure)
