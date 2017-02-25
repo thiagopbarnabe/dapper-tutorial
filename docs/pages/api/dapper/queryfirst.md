@@ -15,13 +15,14 @@ The result can be mapped to:
 - [Strongly Typed](#example---query-strongly-typed)
 
 ### First, Single & Default
+Be careful to use the right method. First & Single methods are very different.
 
-| Result          | None      | Single | Many       |
-| :-------------- | :-------: | :----: | :--------: |
-| First           | Exception | Item   | First Item |
-| FirstOrDefault  | Default   | Item   | First Item |
-| Single          | Exception | Item   | Exception  |
-| SingleOrDefault | Default   | Item   | Exception  |
+| Result          | No Item   | One Item | Many Items |
+| :-------------- | :-------: | :------: | :--------: |
+| First           | Exception | Item     | First Item |
+| Single          | Exception | Item     | Exception  |
+| FirstOrDefault  | Default   | Item     | First Item |
+| SingleOrDefault | Default   | Item     | Exception  |
 
 ## Example - Query Anonymous
 Execute a query and map the first result to a dynamic list.
