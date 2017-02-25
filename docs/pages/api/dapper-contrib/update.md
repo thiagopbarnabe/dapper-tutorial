@@ -6,6 +6,7 @@ permalink: update
 
 {% include template-h1.html %}
 
+## Description
 UPDATE a single or many entities.
 
 - [Update Single](#example---update-single)
