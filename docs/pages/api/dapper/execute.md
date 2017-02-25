@@ -7,12 +7,12 @@ permalink: execute
 {% include template-h1.html %}
 
 Execute a command one or multiple times and return the number of affected rows. This method is usually used to execute:
-- [Stored Procedure](#example---stored-procedure)
-- [INSERT statement](#example---insert)
-- [UPDATE statement](#example---update)
-- [DELETE statement](#example---delete)
+- [Stored Procedure](#example---execute-stored-procedure)
+- [INSERT statement](#example---execute-insert)
+- [UPDATE statement](#example---execute-update)
+- [DELETE statement](#example---execute-delete)
 
-## Example - Stored Procedure
+## Example - Execute Stored Procedure
 
 ### Single
 Execute the Stored Procedure a single time.
@@ -28,7 +28,7 @@ Execute the Stored Procedure multiple times. Once for every object in the array 
 example
 {% endhighlight %}
 
-## Example - INSERT
+## Example - Execute INSERT
 
 ### Single
 Execute the INSERT Statement a single time.
@@ -44,7 +44,7 @@ Execute the INSERT Statement multiple times. Once for every object in the array 
 example
 {% endhighlight %}
 
-## Example - UPDATE
+## Example - Execute UPDATE
 
 ### Single
 Execute the UPDATE Statement a single time.
@@ -60,7 +60,7 @@ Execute the UPDATE Statement multiple times. Once for every object in the array 
 example
 {% endhighlight %}
 
-## Example - DELETE
+## Example - Execute DELETE
 
 ### Single
 Execute the DELETE Statement a single time.
