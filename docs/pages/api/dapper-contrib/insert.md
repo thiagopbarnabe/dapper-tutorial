@@ -8,6 +8,9 @@ permalink: insert
 
 INSERT a single or many entities.
 
+- [Insert Single](#example---insert-single)
+- [Insert Many](#example---insert-single)
+
 ## Example - Insert Single
 INSERT a single entitiy.
 
