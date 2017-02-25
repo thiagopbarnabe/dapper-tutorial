@@ -5,3 +5,5 @@ permalink: data-annotation-write
 ---
 
 {% include template-h1.html %}
+
+Specifie if the property is writable or not.
