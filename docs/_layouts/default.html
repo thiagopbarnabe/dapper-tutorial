@@ -20,7 +20,7 @@
  </head>
   <body>
 <style>
-header #nav-context {
+header .overflow-y {
 	height: 600px;
 	overflow-y: scroll;
 }
@@ -115,8 +115,10 @@ header #nav-context {
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				
-				<div id="nav-context" class="navbar-collapse collapse">			
+				<div id="nav-context" class="navbar-collapse collapse">	
+					<div class="overflow-y">
 					{% include aside.html %}
+					</div>
 				</div>
 				
 				<div id="nav-site" class="navbar-collapse collapse">			
