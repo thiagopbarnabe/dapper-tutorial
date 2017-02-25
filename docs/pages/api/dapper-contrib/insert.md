@@ -6,6 +6,7 @@ permalink: insert
 
 {% include template-h1.html %}
 
+## Description
 INSERT a single or many entities.
 
 - [Insert Single](#example---insert-single)
