@@ -6,89 +6,35 @@ permalink: querysingleordefault
 
 {% include template-h1.html %}
 
+
 ## Description
-Execute a SQL and return the first result.
+Execute a query and map the first result, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.
 
-The result can be from different type:
+The result can be mapped to:
 
-- [Anonymous](#query-anonymous)
-- [Strongly Typed](#query-strongly-typed)
-- [Multi-Mapping](#query-multi-mapping)
-- [Multi-Result](#query-multi-result)
-- [Multi-Type](#query-multi-type)
+- [Anonymous](#example---query-anonymous)
+- [Strongly Typed](#example---query-strongly-typed)
 
-> FirstOrDefault vs SingleOrDefault: FirstOrDefault return the first element of a sequence or default value if the sequence contain no element. SingleOrDefault throw an exception if more than 1 element is found in the sequence.
+### First, Single & Default
+Be careful to use the right method. First & Single methods are very different.
 
-### Query Overloads
+| Result          | No Item   | One Item | Many Items |
+| :-------------- | :-------: | :------: | :--------: |
+| First           | Exception | Item     | First Item |
+| Single          | Exception | Item     | Exception  |
+| FirstOrDefault  | Default   | Item     | First Item |
+| SingleOrDefault | Default   | Item     | Exception  |
+
+## Example - Query Anonymous
+Execute a query and map the first result to a dynamic list, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.
 
 {% highlight csharp %}
-object QuerySingleOrDefault(this IDbConnection cnn, string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
-object QuerySingleOrDefault(this IDbConnection cnn, Type type, string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
-T QuerySingleOrDefault<T>(this IDbConnection cnn, string sql, object param = null, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
-T QuerySingleOrDefault<T>(this IDbConnection cnn, CommandDefinition command)
+example
 {% endhighlight %}
 
-## Query Anonymous
-{% include template-example.html %} 
+## Example - Query Strongly Typed
+Execute a query and map the first result to a strongly typed list, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.
+
 {% highlight csharp %}
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
-{
-    // SET BatchSize value.
-    bulkCopy.BatchSize = 4000;
-
-    bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
-}
-{% endhighlight %}
-
-## Query Strongly Typed
-{% include template-example.html %} 
-{% highlight csharp %}
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
-{
-    // SET BatchSize value.
-    bulkCopy.BatchSize = 4000;
-
-    bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
-}
-{% endhighlight %}
-
-## Query Multi-Mapping
-{% include template-example.html %} 
-{% highlight csharp %}
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
-{
-    // SET BatchSize value.
-    bulkCopy.BatchSize = 4000;
-
-    bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
-}
-{% endhighlight %}
-
-## Query Multi-Result
-{% include template-example.html %} 
-{% highlight csharp %}
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
-{
-    // SET BatchSize value.
-    bulkCopy.BatchSize = 4000;
-
-    bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
-}
-{% endhighlight %}
-
-## Query Multi-Type
-{% include template-example.html %} 
-{% highlight csharp %}
-using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString, transaction))
-{
-    // SET BatchSize value.
-    bulkCopy.BatchSize = 4000;
-
-    bulkCopy.DestinationTableName = "TheDestinationTable";
-    bulkCopy.WriteToServer(dt);
-}
+example
 {% endhighlight %}
