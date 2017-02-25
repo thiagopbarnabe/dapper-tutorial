@@ -9,7 +9,7 @@ permalink: query
 ## Description
 Execute a query and map the result.
 
-The result can be mapped to different type:
+The result can be mapped to:
 
 - [Anonymous](#example---query-anonymous)
 - [Strongly Typed](#example---query-strongly-typed)
@@ -40,13 +40,13 @@ example
 {% endhighlight %}
 
 ### One to many
-Execute a query and map the result to a strongly typed list with a one to many relation.
+Execute a query and map the result to a strongly typed list with a one to many relations.
 {% highlight csharp %}
 example
 {% endhighlight %}
 
 ## Example - Query Multi-Type
-Execute a query and map the result to a list with multiple different types.
+Execute a query and map the result to a list of different types.
 
 {% highlight csharp %}
 example
