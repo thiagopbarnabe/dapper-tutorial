@@ -8,14 +8,14 @@ permalink: delete
 
 DELETE a single or many entities.
 
-## Example - DELETE Single
+## Example - Delete Single
 DELETE a single entitiy.
 
 {% highlight csharp %}
 example
 {% endhighlight %}
 
-## Example - DELETE Many
+## Example - Delete Many
 DELETE many entities.
 
 {% highlight csharp %}
