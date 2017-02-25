@@ -6,7 +6,7 @@ permalink: getall
 
 {% include template-h1.html %}
 
-Get all entities.
+GET ALL entities.
 
 {% highlight csharp %}
 example
