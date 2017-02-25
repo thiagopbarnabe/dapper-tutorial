@@ -13,8 +13,8 @@ The result can be mapped to:
 
 - [Anonymous](#example---query-anonymous)
 - [Strongly Typed](#example---query-strongly-typed)
-- [Multi-Mapping (One to One)](#example---query-multi-mapping)
-- [Multi-Mapping (One to Many)](#example---query-multi-mapping)
+- [Multi-Mapping (One to One)](#example---query-multi-mapping-one-to-one)
+- [Multi-Mapping (One to Many)](#example---query-multi-mapping-one-to-many)
 - [Multi-Type](#example---query-multi-type)
 
 ## Example - Query Anonymous
