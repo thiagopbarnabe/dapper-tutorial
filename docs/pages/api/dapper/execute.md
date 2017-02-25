@@ -15,23 +15,47 @@ Execute method allow you to execute a SQL Command and return the number of affec
 ## Example - Stored Procedure
 
 ### Single
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ### Many
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ## Example - INSERT
 
 ### Single
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ### Many
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ## Example - UPDATE
 
 ### Single
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ### Many
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ## Example - DELETE
 
 ### Single
+{% highlight csharp %}
+example
+{% endhighlight %}
 
 ### Many
+{% highlight csharp %}
+example
+{% endhighlight %}
