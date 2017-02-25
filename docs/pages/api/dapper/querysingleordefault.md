@@ -6,7 +6,6 @@ permalink: querysingleordefault
 
 {% include template-h1.html %}
 
-
 ## Description
 Execute a query and map the first result, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.
 
