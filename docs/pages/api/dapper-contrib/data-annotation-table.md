@@ -6,6 +6,7 @@ permalink: data-annotation-table
 
 {% include template-h1.html %}
 
+## Description
 Specifie the destination table name mapped to the entity.
 
 {% highlight csharp %}
