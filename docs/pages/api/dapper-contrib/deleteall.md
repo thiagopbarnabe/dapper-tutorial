@@ -6,6 +6,7 @@ permalink: deleteall
 
 {% include template-h1.html %}
 
+## Description
 DELETE ALL entities.
 
 {% highlight csharp %}
