@@ -5,6 +5,8 @@ permalink: querymultiple
 ---
 
 {% include template-h1.html %}
+
+## Description
 Execute multiple queries within the same command and map results.
 
 Results can be mapped to:
