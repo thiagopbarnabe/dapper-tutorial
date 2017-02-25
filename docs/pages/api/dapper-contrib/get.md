@@ -6,6 +6,7 @@ permalink: get
 
 {% include template-h1.html %}
 
+## Description
 Get a single entity by ID.
 
 {% highlight csharp %}
