@@ -9,9 +9,7 @@ permalink: query
 ## Description
 Execute a query and map the result.
 
-The result can be mapped to different type
-
-The result can be from different type:
+The result can be mapped to different type:
 
 - [Anonymous](#example---query-anonymous)
 - [Strongly Typed](#example---query-strongly-typed)
