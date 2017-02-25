@@ -9,7 +9,7 @@ permalink: dapper
 ## What's Dapper?
 Dapper is a simple object mapper for .NET
 
-A lot of people call this library "**King of Micro ORM**"
+A lot of people call this library the **King of Micro ORM**.
 
 ## Installation
 Dapper is installed through NuGet: https://www.nuget.org/packages/Dapper
