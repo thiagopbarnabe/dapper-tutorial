@@ -5,6 +5,8 @@ permalink: parameter-anonymous
 ---
 
 {% include template-h1.html %}
+
+## Description
 Use anonymous type to specify query parameter.
 
 All methods support anonymous type:
