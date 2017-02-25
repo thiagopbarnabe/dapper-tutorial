@@ -8,14 +8,14 @@ permalink: insert
 
 INSERT a single or many entities.
 
-## Example - INSERT Single
+## Example - Insert Single
 INSERT a single entitiy.
 
 {% highlight csharp %}
 example
 {% endhighlight %}
 
-## Example - INSERT Many
+## Example - Insert Many
 INSERT many entities.
 
 {% highlight csharp %}
