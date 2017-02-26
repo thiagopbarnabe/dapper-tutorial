@@ -16,12 +16,31 @@ DELETE a single or many entities.
 DELETE a single entitiy.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var isSuccess = connection.Delete(new Invoice {InvoiceID = 1});
+}
 {% endhighlight %}
 
 ## Example - Delete Many
 DELETE many entities.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var list = new List<Invoice>()
+    {
+        new Invoice {InvoiceID = 1},
+        new Invoice {InvoiceID = 2},
+        new Invoice {InvoiceID = 3}
+    };
+
+    var isSuccess = connection.Delete(list);
+
+    My.Result.Show(isSuccess);
+}
 {% endhighlight %}
