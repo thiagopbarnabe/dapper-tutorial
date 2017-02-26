@@ -28,12 +28,26 @@ Be careful to use the right method. First & Single methods are very different.
 Execute a query and map the first result to a dynamic list, and throws an exception if there is not exactly one element in the sequence.
 
 {% highlight csharp %}
-example
+string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
+
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var invoice = connection.QuerySingle(sql, new {InvoiceID = 1});
+}
 {% endhighlight %}
 
 ## Example - Query Strongly Typed
 Execute a query and map the first result to a strongly typed list, and throws an exception if there is not exactly one element in the sequence.
 
 {% highlight csharp %}
-example
+string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
+
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var invoice = connection.QuerySingle<Invoice>(sql, new {InvoiceID = 1});
+}
 {% endhighlight %}
