@@ -85,6 +85,7 @@ using (var connection = My.ConnectionFactory())
             (invoice, invoiceItem) =>
             {
                 Invoice invoiceEntry;
+                
                 if (!invoiceDictionary.TryGetValue(invoice.InvoiceID, out invoiceEntry))
                 {
                     invoiceEntry = invoice;
