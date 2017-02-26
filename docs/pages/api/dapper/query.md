@@ -27,7 +27,7 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var invoices = connection.Query(My.SqlText.InvoiceSelect).ToList();
+    var invoices = connection.Query(sql).ToList();
 }
 {% endhighlight %}
 
