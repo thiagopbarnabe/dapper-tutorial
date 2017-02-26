@@ -16,26 +16,46 @@ UPDATE entities using Bulk Operation.
 UPDATE a single entity with Bulk Operation.
 
 {% highlight csharp %}
-Example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+    
+    connection.BulkUpdate(invoice);
+}
 {% endhighlight %}
 
 ## Example - Update Many
 UPDATE many entities with Bulk Operation.
 
 {% highlight csharp %}
-Example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    connection.BulkUpdate(invoices);
+}
 {% endhighlight %}
 
 ## Example - Update with relation (One to One)
 UPDATE entities with a one to one relation with Bulk Operation.
 
 {% highlight csharp %}
-Example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+    
+    connection.BulkUpdate(invoices).ThenBulkUpdate(x => x.InvoiceDetail);
+}
 {% endhighlight %}
 
 ## Example - Update with relation (One to Many)
 UPDATE entities with a one to many relation with Bulk Operation.
 
 {% highlight csharp %}
-Example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    connection.BulkUpdate(invoices).ThenBulkUpdate(x => x.Items);
+}
 {% endhighlight %}
