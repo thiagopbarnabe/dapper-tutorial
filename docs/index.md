@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dapper Tutorials & Examples | C# Dapper dot net
+title: Dapper Tutorials & Examples | C# Dapper dot net | C# Micro ORM
 ---
 
 <div class="row">
