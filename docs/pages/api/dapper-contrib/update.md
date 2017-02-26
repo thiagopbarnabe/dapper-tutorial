@@ -16,7 +16,12 @@ UPDATE a single or many entities.
 UPDATE a single entitiy.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var isSuccess = connection.Update(new Invoice { InvoiceID = 1, Code = "Update_Single_1"});
+}
 {% endhighlight %}
 
 ## Example - Update Many
