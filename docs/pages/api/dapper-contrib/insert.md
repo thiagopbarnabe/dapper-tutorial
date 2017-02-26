@@ -28,5 +28,17 @@ using (var connection = My.ConnectionFactory())
 INSERT many entities.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var list = new List<Invoice>()
+    {
+        new Invoice() {Code = "Insert_Many_1"},
+        new Invoice() {Code = "Insert_Many_2"},
+        new Invoice() {Code = "Insert_Many_3"}
+    };
+
+    var isSuccess = connection.Insert(list);
+}
 {% endhighlight %}
