@@ -20,7 +20,7 @@ Example
 {% endhighlight %}
 
 ## Example - Delete Many
-DELETE a many entities with Bulk Operation.
+DELETE many entities with Bulk Operation.
 
 {% highlight csharp %}
 Example
