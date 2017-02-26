@@ -22,7 +22,7 @@ The result can be mapped to:
 | Name | Description |
 | :--- | :---------- |
 | sql         | The query to execute. |
-| param       | The query parameters. |
+| param       | The query parameters (default = null). |
 | transaction | The transaction to use (default = null). |
 | buffered    | True to buffer readeing the results of the query (default = true). |
 
