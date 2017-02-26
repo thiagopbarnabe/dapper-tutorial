@@ -3,7 +3,7 @@ layout: default
 title: Dapper Tutorials & Examples | C# Dapper dot net Documentations | C# Micro ORM
 ---
 
-<h1>Dapper Tutorials & Examples - C# Micro ORM</h1>
+<h1 class="text-center" style="margin-bottom: 40px; font-size: 40px">Dapper Tutorials & Examples - C# Micro ORM</h1>
 
 <div class="row">
 	<div class="col-md-6 col-lg-4">
