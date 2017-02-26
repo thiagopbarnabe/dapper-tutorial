@@ -16,7 +16,12 @@ INSERT a single or many entities.
 INSERT a single entitiy.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var isSuccess = connection.Insert(new Invoice { Code = "Insert_Single_1" });
+}
 {% endhighlight %}
 
 ## Example - Insert Many
