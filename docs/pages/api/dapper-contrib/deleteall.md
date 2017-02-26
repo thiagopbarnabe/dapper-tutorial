@@ -10,5 +10,10 @@ permalink: deleteall
 DELETE ALL entities.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var isSuccess = connection.DeleteAll<Invoice>();
+}
 {% endhighlight %}
