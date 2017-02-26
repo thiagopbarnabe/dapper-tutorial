@@ -40,7 +40,5 @@ using (var connection = My.ConnectionFactory())
     };
 
     var isSuccess = connection.Delete(list);
-
-    My.Result.Show(isSuccess);
 }
 {% endhighlight %}
