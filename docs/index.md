@@ -5,6 +5,16 @@ title: Dapper Tutorials & Examples | C# Dapper dot net Documentations | C# Micro
 
 <h1 class="text-center" style="margin-bottom: 60px; font-size: 60px">Dapper Tutorials & Examples - C# Micro ORM</h1>
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- leaderboard -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-7869211898023730"
+     data-ad-slot="1439249006"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <div class="row">
 	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
