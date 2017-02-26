@@ -19,14 +19,40 @@ Execute a command one or multiple times and return the number of affected rows. 
 Execute the Stored Procedure a single time.
 
 {% highlight csharp %}
-example
+string sql = "Invoice_Insert";
+
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var affectedRows = connection.Execute(sql, new { Code = "Single_Insert_1" }, commandType: CommandType.StoredProcedure);
+
+    My.Result.Show(affectedRows);
+}
 {% endhighlight %}
 
 ### Many
 Execute the Stored Procedure multiple times. Once for every object in the array list.
 
 {% highlight csharp %}
-example
+string sql = "Invoice_Insert";
+
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var affectedRows = connection.Execute(sql,
+        new[]
+        {
+            new {Code = "Many_Insert_1"},
+            new {Code = "Many_Insert_2"},
+            new {Code = "Many_Insert_3"}
+        },
+        commandType: CommandType.StoredProcedure
+    );
+
+    My.Result.Show(affectedRows);
+}
 {% endhighlight %}
 
 ## Example - Execute INSERT
