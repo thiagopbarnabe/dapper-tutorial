@@ -14,12 +14,22 @@ DELETE entities using Bulk Operation.
 DELETE a single entity with Bulk Operation.
 
 {% highlight csharp %}
-Example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    connection.BulkDelete(invoice);
+}
 {% endhighlight %}
 
 ## Example - Delete Many
 DELETE many entities with Bulk Operation.
 
 {% highlight csharp %}
-Example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    connection.BulkDelete(invoices);
+}
 {% endhighlight %}
