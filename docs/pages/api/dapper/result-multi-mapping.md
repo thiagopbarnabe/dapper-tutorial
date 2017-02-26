@@ -7,7 +7,7 @@ permalink: result-multi-mapping
 {% include template-h1.html %}
 
 ## Description
-Execute a query and map the result to a strongly typed list with relation.
+Execute a query and map the result to a strongly typed list with relations.
 
 The relation can be either:
 - [One to One](#example---query-multi-mapping-one-to-one)
