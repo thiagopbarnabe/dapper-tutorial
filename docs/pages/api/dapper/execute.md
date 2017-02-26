@@ -19,7 +19,7 @@ Execute a command one or multiple times and return the number of affected rows. 
 Execute the Stored Procedure a single time.
 
 {% highlight csharp %}
-string sql = "Invoice_Insert";
+string sql = "EXEC Invoice_Insert";
 
 using (var connection = My.ConnectionFactory())
 {
@@ -35,7 +35,7 @@ using (var connection = My.ConnectionFactory())
 Execute the Stored Procedure multiple times. Once for every object in the array list.
 
 {% highlight csharp %}
-string sql = "Invoice_Insert";
+string sql = "EXEC Invoice_Insert";
 
 using (var connection = My.ConnectionFactory())
 {
@@ -61,11 +61,13 @@ using (var connection = My.ConnectionFactory())
 Execute the INSERT Statement a single time.
 
 {% highlight csharp %}
+string sql = "INSERT INTO Invoice (Code) Values (@Code);";
+
 using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(My.SqlText.InvoiceInsert, new {Code = "Single_Insert_1"});
+    var affectedRows = connection.Execute(sql, new {Code = "Single_Insert_1"});
 }
 {% endhighlight %}
 
@@ -73,11 +75,13 @@ using (var connection = My.ConnectionFactory())
 Execute the INSERT Statement multiple times. Once for every object in the array list.
 
 {% highlight csharp %}
+string sql = "INSERT INTO Invoice (Code) Values (@Code);";
+
 using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(My.SqlText.InvoiceInsert,
+    var affectedRows = connection.Execute(sql,
         new[]
         {
             new {Code = "Many_Insert_1"},
@@ -94,11 +98,13 @@ using (var connection = My.ConnectionFactory())
 Execute the UPDATE Statement a single time.
 
 {% highlight csharp %}
+string sql = "UPDATE Invoice SET Code = @Code WHERE InvoiceID = @InvoiceID";
+
 using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(My.SqlText.InvoiceUpdate, new {InvoiceID = 1, Code = "Single_Update_1"});
+    var affectedRows = connection.Execute(sql, new {InvoiceID = 1, Code = "Single_Update_1"});
 }
 {% endhighlight %}
 
@@ -106,11 +112,13 @@ using (var connection = My.ConnectionFactory())
 Execute the UPDATE Statement multiple times. Once for every object in the array list.
 
 {% highlight csharp %}
+string sql = "UPDATE Invoice SET Code = @Code WHERE InvoiceID = @InvoiceID";
+
 using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(My.SqlText.InvoiceUpdate,
+    var affectedRows = connection.Execute(sql,
         new[]
         {
             new {InvoiceID = 1, Code = "Many_Update_1"},
@@ -126,11 +134,13 @@ using (var connection = My.ConnectionFactory())
 Execute the DELETE Statement a single time.
 
 {% highlight csharp %}
+string sql = "DELETE FROM Invoice WHERE InvoiceID = @InvoiceID";
+
 using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(My.SqlText.InvoiceDelete, new {InvoiceID = 1});
+    var affectedRows = connection.Execute(sql, new {InvoiceID = 1});
 }
 {% endhighlight %}
 
@@ -138,11 +148,13 @@ using (var connection = My.ConnectionFactory())
 Execute the DELETE Statement multiple times. Once for every object in the array list.
 
 {% highlight csharp %}
+string sql = "DELETE FROM Invoice WHERE InvoiceID = @InvoiceID";
+
 using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(My.SqlText.InvoiceDelete,
+    var affectedRows = connection.Execute(sql,
         new[]
         {
             new {InvoiceID = 1},
