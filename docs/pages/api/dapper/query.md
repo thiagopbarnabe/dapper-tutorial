@@ -23,8 +23,8 @@ The result can be mapped to:
 | :--- | :---------- |
 | sql         | The query to execute. |
 | param       | The query parameters. |
-| transaction | The transaction to use (optional). |
-| buffered    | True to buffer readeing the results of the query (default = true, optional). |
+| transaction | The transaction to use (default = null). |
+| buffered    | True to buffer readeing the results of the query (default = true). |
 
 ## Example - Query Anonymous
 Execute a query and map the result to a dynamic list.
