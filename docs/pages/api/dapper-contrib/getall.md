@@ -10,5 +10,10 @@ permalink: getall
 GET ALL entities.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var invoices = connection.GetAll<Invoice>().ToList();
+}
 {% endhighlight %}
