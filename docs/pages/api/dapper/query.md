@@ -22,6 +22,7 @@ Execute a query and map the result to a dynamic list.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice;";
+
 using (var connection = My.ConnectionFactory())
 {
     connection.Open();
