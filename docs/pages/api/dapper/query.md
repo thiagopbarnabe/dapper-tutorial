@@ -17,6 +17,15 @@ The result can be mapped to:
 - [Multi-Mapping (One to Many)](#example---query-multi-mapping-one-to-many)
 - [Multi-Type](#example---query-multi-type)
 
+### Parameters
+
+| Name | Description |
+| :--- | :---------- |
+| sql         | The query to execute. |
+| param       | The query parameters. |
+| transaction | The transaction to use (optional). |
+| buffered    | True to buffer readeing the results of the query (default = true, optional). |
+
 ## Example - Query Anonymous
 Execute a query and map the result to a dynamic list.
 
