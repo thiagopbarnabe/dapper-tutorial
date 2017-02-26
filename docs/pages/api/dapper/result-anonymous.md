@@ -9,7 +9,7 @@ permalink: result-anonymous
 ## Description
 Execute a query method and map the result to a dynamic list.
 
-Anonymous result can be mapped from following methods:
+The anonymous result can be mapped from following methods:
 
 - Query
 - QueryFirst
