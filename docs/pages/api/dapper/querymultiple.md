@@ -9,20 +9,17 @@ permalink: querymultiple
 ## Description
 Execute multiple queries within the same command and map results.
 
-Results can be mapped to:
-- Anonymous List
-- Strongly Typed List
-- Anonymous Item
-- Strongly Type Item
+{% highlight csharp %}
+string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID; SELECT * FROM InvoiceItem WHERE InvoiceID = @InvoiceID;";
 
-## Example - QueryMultiple Anonymous List
-// TBD
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
 
-## Example - QueryMultiple Strongly Typed List
-// TBD
-
-## Example - Query Multiple Anonymous Item
-// TBD
-
-## Example - Query Multiple  Strongly Typed Item
-// TBD
+    using (var multi = connection.QueryMultiple(sql, new {InvoiceID = 1}))
+    {
+        var invoice = multi.Read<Invoice>().First();
+        var invoiceItems = multi.Read<InvoiceItem>().ToList();
+    }
+}
+{% endhighlight %}
