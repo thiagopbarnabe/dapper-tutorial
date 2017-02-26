@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Dapper Tutorials & Examples | C# Dapper dot net
 ---
 
 <div class="row">
