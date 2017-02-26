@@ -62,3 +62,10 @@ using (var connection = My.ConnectionFactory())
                 }
 
                 invoiceEntry.Items.Add(invoiceItem);
+                return invoiceEntry;
+            },
+            splitOn: "InvoiceID")
+        .Distinct()
+        .ToList();
+}
+{% endhighlight %}
