@@ -11,11 +11,11 @@ Execute a query method and map the result using dynamic.
 
 The anonymous result can be mapped from following methods:
 
-- [Query](example---query)
-- [QueryFirst](example---queryfirst)
-- [QueryFirstOrDefault](example---queryfirstordefault)
-- [QuerySingle](example---querysingle)
-- [QuerySingleOrDefault](example---querysingleordefault)
+- [Query](#example---query)
+- [QueryFirst](#example---queryfirst)
+- [QueryFirstOrDefault](#example---queryfirstordefault)
+- [QuerySingle](#example---querysingle)
+- [QuerySingleOrDefault](#example---querysingleordefault)
 
 ## Example - Query
 Execute a query and map the result to a dynamic list.
