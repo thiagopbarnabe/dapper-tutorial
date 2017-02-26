@@ -28,5 +28,17 @@ using (var connection = My.ConnectionFactory())
 UPDATE many entities.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var list = new List<Invoice>()
+    {
+        new Invoice {InvoiceID = 1, Code = "Update_Many_1"},
+        new Invoice {InvoiceID = 2, Code = "Update_Many_2"},
+        new Invoice {InvoiceID = 3, Code = "Update_Many_3"}
+    };
+
+    var isSuccess = connection.Update(list);
+}
 {% endhighlight %}
