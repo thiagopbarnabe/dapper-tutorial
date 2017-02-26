@@ -5,6 +5,7 @@ title: Dapper Tutorials & Examples | C# Dapper dot net Documentations | C# Micro
 
 <h1 class="text-center" style="margin-bottom: 60px; font-size: 60px">Dapper Tutorials & Examples - C# Micro ORM</h1>
 
+<div style="margin: auto">
 <script type="text/javascript">
     google_ad_client = "ca-pub-7869211898023730";
     google_ad_slot = "1439249006";
@@ -15,6 +16,7 @@ title: Dapper Tutorials & Examples | C# Dapper dot net Documentations | C# Micro
 <script type="text/javascript"
 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+</div>
 
 <div class="row">
 	<div class="col-md-6 col-lg-4">
