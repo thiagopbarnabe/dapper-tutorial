@@ -7,7 +7,7 @@ permalink: result-anonymous
 {% include template-h1.html %}
 
 ## Description
-Execute a query method and map the result using anonymous.
+Execute a query method and map the result using dynamic.
 
 The anonymous result can be mapped from following methods:
 
