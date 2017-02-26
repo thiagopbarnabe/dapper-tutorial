@@ -10,5 +10,10 @@ permalink: get
 Get a single entity by ID.
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var invoice = connection.Get<Invoice>(1);
+}
 {% endhighlight %}
