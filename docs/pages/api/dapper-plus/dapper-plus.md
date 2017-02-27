@@ -21,7 +21,7 @@ Official Website: <a href="http://dapper-plus.net/" target="_blank">http://dappe
 ## Installation
 Dapper Plus is installed through NuGet: <a href="https://www.nuget.org/packages/Z.Dapper.Plus/" target="_blank">https://www.nuget.org/packages/Z.Dapper.Plus/</a>
 
-This library is **NOT FREE** but a monthly trial is available available.
+This library is **NOT FREE** but a monthly trial is available at the start of every months.
 
 ## Requirement
 Dapper Plus is compatible with all major database provider:
