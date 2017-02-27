@@ -13,6 +13,14 @@ Execute a command one or multiple times and return the number of affected rows. 
 - [UPDATE statement](#example---execute-update)
 - [DELETE statement](#example---execute-delete)
 
+| Name | Description |
+| :--- | :---------- |
+| sql            | The command text to execute. |
+| param          | The command parameters (default = null). |
+| transaction    | The transaction to use (default = null). |
+| commandTimeout | The command timeout (default = null) |
+| commandType    | The command type (default = null) |
+
 ## Example - Execute Stored Procedure
 
 ### Single
