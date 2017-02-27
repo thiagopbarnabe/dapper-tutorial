@@ -16,10 +16,10 @@ Dapper Plus is library that extend IDbConnection interface with Bulk Operations 
 
 This library is the **fatest way** to perform saving operations in a database.
 
-Official Website: http://dapper-plus.net/
+Official Website: <a href="http://dapper-plus.net/" target="_blank">http://dapper-plus.net/</a>
 
 ## Installation
-Dapper Plus is installed through NuGet: https://www.nuget.org/packages/Z.Dapper.Plus/
+Dapper Plus is installed through NuGet: <a href="https://www.nuget.org/packages/Z.Dapper.Plus/" target="_blank">https://www.nuget.org/packages/Z.Dapper.Plus/</a>
 
 This library is **NOT FREE** but a monthly trial is available available.
 
