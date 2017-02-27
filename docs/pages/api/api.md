@@ -52,7 +52,7 @@ permalink: api
 		<h4>Utilities</h4>
 		<ul>
 			<li><a href="async">Async</a></li>
-			<li><a href="buferred">Buferred</a></li>
+			<li><a href="buffered">Buffered</a></li>
 			<li><a href="transaction">Transaction</a></li>
 			<li><a href="stored-procedure">Stored Procedure</a></li>
 		</ul>
