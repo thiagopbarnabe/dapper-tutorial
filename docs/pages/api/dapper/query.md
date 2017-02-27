@@ -21,7 +21,6 @@ The result can be mapped to:
 
 | Name | Description |
 | :--- | :---------- |
-| &lt;T&gt; / Type | The type of object to return. |
 | sql         | The query to execute. |
 | param       | The query parameters (default = null). |
 | transaction | The transaction to use (default = null). |
