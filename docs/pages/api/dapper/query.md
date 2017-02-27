@@ -25,6 +25,8 @@ The result can be mapped to:
 | param       | The query parameters (default = null). |
 | transaction | The transaction to use (default = null). |
 | buffered    | True to buffer readeing the results of the query (default = true). |
+| commandTimeout | The command timeout (default = null) |
+| commandType    | The command type (default = null) |
 
 ## Example - Query Anonymous
 Execute a query and map the result to a dynamic list.
