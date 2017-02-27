@@ -12,7 +12,7 @@ Dapper is a simple object mapper for .NET
 A lot of people call this library the **King of Micro ORM**.
 
 ## Installation
-Dapper is installed through NuGet: https://www.nuget.org/packages/Dapper
+Dapper is installed through NuGet: <a href="https://www.nuget.org/packages/Dapper" target="_blank">https://www.nuget.org/packages/Dapper</a>
 
 ## Requirement
 Dapper work with any database provider since there is no DB specific implementation.
