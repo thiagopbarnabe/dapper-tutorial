@@ -14,6 +14,16 @@ The result can be mapped to:
 - [Anonymous](#example---query-anonymous)
 - [Strongly Typed](#example---query-strongly-typed)
 
+### Parameters
+
+| Name | Description |
+| :--- | :---------- |
+| sql            | The query to execute. |
+| param          | The query parameters (default = null). |
+| transaction    | The transaction to use (default = null). |
+| commandTimeout | The command timeout (default = null) |
+| commandType    | The command type (default = null) |
+
 ### First, Single & Default
 Be careful to use the right method. First & Single methods are very different.
 
