@@ -14,9 +14,7 @@ Dapper Plus is library that extend IDbConnection interface with Bulk Operations 
 - Bulk Delete
 - Bulk Merge
 
-and more...
-
-This library is the fatest way to perform saving operations in a database.
+This library is the **fatest way** to perform saving operations in a database.
 
 Official Website: http://dapper-plus.net/
 
