@@ -23,3 +23,13 @@ using (var connection = My.ConnectionFactory())
     }
 }
 {% endhighlight %}
+
+### Parameters
+
+| Name | Description |
+| :--- | :---------- |
+| sql            | The query to execute. |
+| param          | The query parameters (default = null). |
+| transaction    | The transaction to use (default = null). |
+| commandTimeout | The command timeout (default = null) |
+| commandType    | The command type (default = null) |
