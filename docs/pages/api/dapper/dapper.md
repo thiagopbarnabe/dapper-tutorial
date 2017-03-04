@@ -18,8 +18,6 @@ Dapper is installed through NuGet: <a href="https://www.nuget.org/packages/Dappe
 
 > PM> Install-Package Dapper
 
-Extension method will be added automatically to your project.
-
 ## Requirement
 Dapper work with any database provider since there is no DB specific implementation.
 
