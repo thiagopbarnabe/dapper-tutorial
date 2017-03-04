@@ -16,4 +16,17 @@ Dapper also extend the IDbConnection interface with Async (asynchronous) methods
 - QuerySingleOrDefaultAsync
 - QueryMultipleAsync
 
-> Only non-asynchronous version is documented in this tutorial to make it easier to read.
+> We only added non-asynchronous version in this tutorial to make it easier to read.
+
+{% highlight csharp %}
+string sqlInvoices = "SELECT * FROM Invoice;";
+string sqlInvoice = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
+string sp = "EXEC Invoice_Insert";
+
+using (var connection = My.ConnectionFactory())
+{
+	var invoices = connection.QueryAsync<Invoice>(sqlInvoices).ToList();
+	var invoice = connection.QueryFirstOrDefaultAsync(sqlInvoice, new {InvoiceID = 1});
+	var affectedRows = connection.ExecuteAsync(sp, new { Param1 = "Single_Insert_1" }, commandType: CommandType.StoredProcedure);
+}
+{% endhighlight %}
