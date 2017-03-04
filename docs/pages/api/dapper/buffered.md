@@ -10,9 +10,9 @@ permalink: buffered
 
 - Default: True
 
-A buffered query return the entire reader at once. This is ideal in most scenario.
+A buffered query return the entire reader at once. That is ideal in most scenario.
 
-A non-buffered query is equivalent as streaming. You only load objects on demand. This can be useful for very large query to reduce memory usage.
+A non-buffered query is equivalent as streaming. You only load objects on demand. That can be useful for a very large query to reduce memory usage.
 
 {% highlight csharp %}
 string sqlInvoices = "SELECT * FROM Invoice;";
