@@ -16,6 +16,10 @@ In a few words, Dapper extend the IDbConnection by providing useful helper to qu
 ## Installation
 Dapper is installed through NuGet: <a href="https://www.nuget.org/packages/Dapper" target="_blank">https://www.nuget.org/packages/Dapper</a>
 
+> PM> Install-Package Dapper
+
+Extension method will be added automatically to your project.
+
 ## Requirement
 Dapper work with any database provider since there is no DB specific implementation.
 
