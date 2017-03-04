@@ -33,7 +33,16 @@ Dapper will extend your IDbConnection interface with multiple methods:
 - [QueryMultiple](/querymultiple)
 
 {% highlight csharp %}
-example
+string sp = "EXEC Invoice_Insert";
+string sqlInvoices = "SELECT * FROM Invoice;";
+string sqlInvoice = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
+
+using (var connection = My.ConnectionFactory())
+{
+	var affectedRows = connection.Execute(sp, new { Param1 = "Single_Insert_1" }, commandType: CommandType.StoredProcedure);
+	var invoices = connection.Query<Invoice>(sqlInvoices).ToList();
+	var invoice = connection.QueryFirstOrDefault(sqlInvoice, new {InvoiceID = 1});
+}
 {% endhighlight %}
 
 ## Parameter
@@ -45,7 +54,9 @@ Execute and queries method can use parameters from multiple different ways:
 - [String](/parameter-string)
 
 {% highlight csharp %}
-example
+using (var connection = My.ConnectionFactory())
+{
+}
 {% endhighlight %}
 
 ## Result
