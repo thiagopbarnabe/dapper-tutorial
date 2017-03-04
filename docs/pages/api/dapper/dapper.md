@@ -52,9 +52,7 @@ Execute and queries method can use parameters from multiple different ways:
 - [String](/parameter-string)
 
 {% highlight csharp %}
-using (var connection = My.ConnectionFactory())
-{
-}
+// ADD examples
 {% endhighlight %}
 
 ## Result
@@ -67,7 +65,15 @@ The result returned by queries method can be mapped to multiple types:
 - [Multi-Type](/result-multi-type)
 
 {% highlight csharp %}
-example
+string sql = "SELECT * FROM Invoice;";
+
+using (var connection = My.ConnectionFactory())
+{
+    connection.Open();
+
+    var anonymousList = connection.Query(sql).ToList();
+    var invoices = connection.Query<Invoice>(sql).ToList();
+}
 {% endhighlight %}
 
 ## Utilities
@@ -75,5 +81,5 @@ example
 - [Stored Procedure](stored-procedure)
 
 {% highlight csharp %}
-example
+// ADD examples
 {% endhighlight %}
