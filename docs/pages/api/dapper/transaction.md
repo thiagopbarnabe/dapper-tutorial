@@ -11,6 +11,8 @@ Dapper support the transaction and TransactionScope
 
 ## Transaction
 
+Begin a new transaction from the connection and pass it in the transaction optional parameter.
+
 ```csharp
 using (var connection = My.ConnectionFactory())
 {
@@ -18,7 +20,7 @@ using (var connection = My.ConnectionFactory())
 
 	using (var transaction = connection.BeginTransaction())
 	{
-		var affectedRows = connection.Execute(My.SqlText.InvoiceInsert, new { Code = "Single_Insert_1" }, commandType: CommandType.StoredProcedure);
+		var affectedRows = connection.Execute(My.SqlText.InvoiceInsert, new { Code = "Single_Insert_1" }, commandType: CommandType.StoredProcedure, transaction: transaction);
 
 		transaction.Commit();
 	}
@@ -26,6 +28,8 @@ using (var connection = My.ConnectionFactory())
 ```
 
 ## TransactionScope
+
+Begin a new transaction scope before starting the connection
 
 ```csharp
 // using System.Transactions;
