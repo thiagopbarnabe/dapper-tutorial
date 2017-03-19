@@ -44,7 +44,9 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    connection.BulkMerge(invoices).ThenBulkMerge(x => x.InvoiceDetail);
+	connection.BulkMerge(invoices)
+		.ThenForEach(x => x.Detail.InvoiceID = x.InvoiceID)
+		.ThenBulkMerge(x => x.Detail);
 }
 {% endhighlight %}
 
@@ -56,6 +58,8 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    connection.BulkMerge(invoices).ThenBulkMerge(x => x.Items);
+	connection.BulkMerge(invoices)
+		.ThenForEach(x => x.Items.ForEach(y => y.InvoiceID = x.InvoiceID))
+		.ThenBulkMerge(x => x.Items);
 }
 {% endhighlight %}
