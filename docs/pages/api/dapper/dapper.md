@@ -52,7 +52,27 @@ Execute and queries method can use parameters from multiple different ways:
 - [String](/parameter-string)
 
 {% highlight csharp %}
-// ADD examples
+// Anonymous
+var affectedRows = connection.Execute(sql,
+                    new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+                    commandType: CommandType.StoredProcedure);
+
+// Dynamic
+DynamicParameters parameter = new DynamicParameters();
+
+parameter.Add("@Kind", InvoiceKind.WebInvoice, DbType.Int32, ParameterDirection.Input);
+parameter.Add("@Code", "Many_Insert_0", DbType.String, ParameterDirection.Input);
+parameter.Add("@RowCount", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+
+connection.Execute(sql,
+	new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+	commandType: CommandType.StoredProcedure);
+
+// List
+connection.Query<Invoice>(sql, new {Kind = new[] {InvoiceKind.StoreInvoice, InvoiceKind.WebInvoice}}).ToList();
+
+// String
+connection.Query<Invoice>(sql, new {Code = new DbString {Value = "Invoice_1", IsFixedLength = false, Length = 9, IsAnsi = true}}).ToList();
 {% endhighlight %}
 
 ## Result
