@@ -44,7 +44,9 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    connection.BulkInsert(invoices).ThenBulkInsert(x => x.InvoiceDetail);
+	connection.BulkInsert(invoices)
+		.ThenForEach(x => x.Detail.InvoiceID = x.InvoiceID)
+		.ThenBulkInsert(x => x.Detail);
 }
 {% endhighlight %}
 
@@ -56,6 +58,8 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    connection.BulkInsert(invoices).ThenBulkInsert(x => x.Items);
+	connection.BulkInsert(invoices)
+		.ThenForEach(x => x.Items.ForEach(y => y.InvoiceID = x.InvoiceID))
+		.ThenBulkInsert(x => x.Items);
 }
 {% endhighlight %}
