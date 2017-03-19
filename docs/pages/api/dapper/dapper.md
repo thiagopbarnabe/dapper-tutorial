@@ -98,8 +98,31 @@ using (var connection = My.ConnectionFactory())
 
 ## Utilities
 
+- [Async](async)
+- [Buffered](buffered)
+- [Transaction](transaction)
 - [Stored Procedure](stored-procedure)
 
 {% highlight csharp %}
-// ADD examples
+// Async
+connection.QueryAsync<Invoice>(sql)
+
+// Buffered
+connection.Query<Invoice>(sql, buffered: false)
+
+// Transaction
+using (var transaction = connection.BeginTransaction())
+{
+	var affectedRows = connection.Execute(sql,
+		new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+		commandType: CommandType.StoredProcedure,
+		transaction: transaction);
+
+	transaction.Commit();
+}
+
+// Stored Procedure
+var affectedRows = connection.Execute(sql,
+	new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+	commandType: CommandType.StoredProcedure);
 {% endhighlight %}
