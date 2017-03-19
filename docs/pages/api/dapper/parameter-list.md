@@ -17,8 +17,6 @@ using (var connection = My.ConnectionFactory())
 	connection.Open();
 
 	var invoices = connection.Query<Invoice>(sql, new {Kind = new[] {InvoiceKind.StoreInvoice, InvoiceKind.WebInvoice}}).ToList();
-
-	My.Result.Show(invoices);
 }
 
 {% endhighlight %}
