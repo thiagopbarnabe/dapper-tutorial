@@ -20,7 +20,7 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var isSuccess = connection.Insert(new Invoice { Code = "Insert_Single_1" });
+    var identity = connection.Insert(new Invoice { Code = "Insert_Single_1" });
 }
 {% endhighlight %}
 
@@ -39,6 +39,6 @@ using (var connection = My.ConnectionFactory())
         new Invoice() {Code = "Insert_Many_3"}
     };
 
-    var isSuccess = connection.Insert(list);
+    var identity = connection.Insert(list);
 }
 {% endhighlight %}
