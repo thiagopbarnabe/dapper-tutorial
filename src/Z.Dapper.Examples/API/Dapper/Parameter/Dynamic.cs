@@ -30,11 +30,17 @@ namespace Z.Dapper.Examples.API.Dapper.Parameter
             {
                 connection.Open();
 
-                var affectedRows = connection.Execute(sql,
-                    new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+                DynamicParameters parameter = new DynamicParameters();
+
+                parameter.Add("@Kind", InvoiceKind.WebInvoice, DbType.Int32, ParameterDirection.Input);
+                parameter.Add("@Code", "Many_Insert_0", DbType.String, ParameterDirection.Input);
+                parameter.Add("@RowCount", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
+
+                connection.Execute(sql,
+                    parameter,
                     commandType: CommandType.StoredProcedure);
 
-                My.Result.Show(affectedRows);
+                My.Result.Show(parameter.Get<int>("@RowCount"));
             }
         }
 

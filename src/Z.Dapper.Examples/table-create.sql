@@ -1,4 +1,5 @@
 ﻿/*
+DROP PROCEDURE [Invoice_Insert]
 DROP TABLE InvoiceItem;
 DROP TABLE InvoiceDetail;
 DROP TABLE Invoice;
@@ -44,4 +45,19 @@ REFERENCES [dbo].[Invoice] ([InvoiceID])
 GO
 
 ALTER TABLE [dbo].[InvoiceItem] CHECK CONSTRAINT [FK_InvoiceItem_Invoice]
+GO
+
+CREATE PROCEDURE [Invoice_Insert]
+    @Kind INT ,
+    @Code VARCHAR(50)
+AS
+    BEGIN
+
+        INSERT  INTO dbo.Invoice
+                ( Kind, Code )
+        VALUES  ( @Kind, @Code )
+
+		RETURN @@ROWCOUNT
+    END
+
 GO

@@ -39,7 +39,7 @@ namespace Z.Dapper.Examples.API.Dapper.Methods
             public static string Invoice_Select_ByKind = "SELECT * FROM Invoice WHERE Kind IN @Kind;";
             public static string Invoice_Select_ByCode = "SELECT * FROM Invoice WHERE Code = @Code;";
             public static string Invoice_Select_ByID = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
-            public static string Invoice_ThenItem_Select_ByKind = "SELECT * FROM Invoice; SELECT * FROM InvoiceItem";
+            public static string Invoice_Select_Then_Item_Select = "SELECT * FROM Invoice; SELECT * FROM InvoiceItem";
             public static string Invoice_Insert = "INSERT INTO Invoice (Kind, Code) Values (@Kind, @Code);";
             public static string Invoice_Update = "UPDATE Invoice SET Code = @Code WHERE InvoiceID = @InvoiceID";
             public static string Invoice_Delete = "DELETE FROM Invoice WHERE InvoiceID = @InvoiceID";

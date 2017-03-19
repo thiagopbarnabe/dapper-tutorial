@@ -29,9 +29,9 @@ namespace Z.Dapper.Examples.API.DapperContrib.DataAnnotations
                 connection.Insert(invoice);
 
                 var invoiceDetail = new InvoiceDetailContrib {InvoiceID = invoice.InvoiceID, Detail = "Insert_Single_1"};
-                var isSuccess = connection.Insert(invoiceDetail);
+                connection.Insert(invoiceDetail);
 
-                My.Result.Show(isSuccess);
+                My.Result.Show(true);
             }
         }
     }

@@ -26,9 +26,9 @@ namespace Z.Dapper.Examples.API.DapperContrib.Methods
             {
                 connection.Open();
 
-                var isSuccess = connection.Insert(new InvoiceContrib {Kind = InvoiceKind.WebInvoice, Code = "Insert_Single_1"});
+                var identity = connection.Insert(new InvoiceContrib {Kind = InvoiceKind.WebInvoice, Code = "Insert_Single_1"});
 
-                My.Result.Show(isSuccess);
+                My.Result.Show(identity);
             }
         }
 
@@ -47,9 +47,9 @@ namespace Z.Dapper.Examples.API.DapperContrib.Methods
                     new InvoiceContrib {Kind = InvoiceKind.StoreInvoice, Code = "Insert_Many_3"}
                 };
 
-                var isSuccess = connection.Insert(list);
+                var identity = connection.Insert(list);
 
-                My.Result.Show(isSuccess);
+                My.Result.Show(identity);
             }
         }
     }

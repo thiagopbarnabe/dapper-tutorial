@@ -34,6 +34,7 @@
             this.uiQueryFirstAsync = new System.Windows.Forms.Button();
             this.uiQueryAsync = new System.Windows.Forms.Button();
             this.uiExecuteAsync = new System.Windows.Forms.Button();
+            this.uiQueryMultipleAsync = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uiQuerySingleAsync
@@ -96,11 +97,22 @@
             this.uiExecuteAsync.UseVisualStyleBackColor = true;
             this.uiExecuteAsync.Click += new System.EventHandler(this.ExecuteAsync);
             // 
+            // uiQueryMultipleAsync
+            // 
+            this.uiQueryMultipleAsync.Location = new System.Drawing.Point(20, 260);
+            this.uiQueryMultipleAsync.Name = "uiQueryMultipleAsync";
+            this.uiQueryMultipleAsync.Size = new System.Drawing.Size(245, 23);
+            this.uiQueryMultipleAsync.TabIndex = 6;
+            this.uiQueryMultipleAsync.Text = "QueryMultipleAsync";
+            this.uiQueryMultipleAsync.UseVisualStyleBackColor = true;
+            this.uiQueryMultipleAsync.Click += new System.EventHandler(this.QueryMultipleAsync);
+            // 
             // Async
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 301);
+            this.Controls.Add(this.uiQueryMultipleAsync);
             this.Controls.Add(this.uiExecuteAsync);
             this.Controls.Add(this.uiQuerySingleAsync);
             this.Controls.Add(this.uiQuerySingleOrDefaultAsync);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button uiQueryFirstAsync;
         private System.Windows.Forms.Button uiQueryAsync;
         private System.Windows.Forms.Button uiExecuteAsync;
+        private System.Windows.Forms.Button uiQueryMultipleAsync;
     }
 }

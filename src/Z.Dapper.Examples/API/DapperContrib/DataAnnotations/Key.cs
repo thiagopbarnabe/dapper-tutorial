@@ -25,9 +25,9 @@ namespace Z.Dapper.Examples.API.DapperContrib.DataAnnotations
             {
                 connection.Open();
 
-                var isSuccess = connection.Insert(new InvoiceContrib {Kind = InvoiceKind.WebInvoice, Code = "Insert_Single_1"});
+                var identity = connection.Insert(new InvoiceContrib {Kind = InvoiceKind.WebInvoice, Code = "Insert_Single_1"});
 
-                My.Result.Show(isSuccess);
+                My.Result.Show(identity);
             }
         }
     }

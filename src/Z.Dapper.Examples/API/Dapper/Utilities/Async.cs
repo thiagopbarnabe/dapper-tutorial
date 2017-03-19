@@ -117,5 +117,25 @@ namespace Z.Dapper.Examples.API.Dapper.Utilities
                 My.Result.Show(invoice);
             }
         }
+
+        private void QueryMultipleAsync(object sender, EventArgs e)
+        {
+            My.Database.Reset();
+
+            var sql = My.SqlText.Invoice_ThenItem_Select_ByKind;
+
+            using (var connection = My.ConnectionFactory())
+            {
+                connection.Open();
+
+                using (var multi = connection.QueryMultipleAsync(sql, new { InvoiceID = 1 }).Result)
+                {
+                    var invoice = multi.Read<Invoice>().First();
+                    var invoiceItems = multi.Read<InvoiceItem>().ToList();
+
+                    My.Result.Show(invoice, invoiceItems);
+                }
+            }
+        }
     }
 }
