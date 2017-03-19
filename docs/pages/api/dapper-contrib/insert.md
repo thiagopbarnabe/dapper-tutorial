@@ -20,7 +20,7 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var identity = connection.Insert(new Invoice { Code = "Insert_Single_1" });
+    var identity = connection.Insert(new InvoiceContrib {Kind = InvoiceKind.WebInvoice, Code = "Insert_Single_1"});
 }
 {% endhighlight %}
 
@@ -32,11 +32,11 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var list = new List<Invoice>()
+    var list = new List<InvoiceContrib>
     {
-        new Invoice() {Code = "Insert_Many_1"},
-        new Invoice() {Code = "Insert_Many_2"},
-        new Invoice() {Code = "Insert_Many_3"}
+        new InvoiceContrib {Kind = InvoiceKind.WebInvoice, Code = "Insert_Many_1"},
+        new InvoiceContrib {Kind = InvoiceKind.WebInvoice, Code = "Insert_Many_2"},
+        new InvoiceContrib {Kind = InvoiceKind.StoreInvoice, Code = "Insert_Many_3"}
     };
 
     var identity = connection.Insert(list);
