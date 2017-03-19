@@ -44,7 +44,7 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
     
-    connection.BulkUpdate(invoices).ThenBulkUpdate(x => x.InvoiceDetail);
+    connection.BulkUpdate(invoices, x => x.Detail);
 }
 {% endhighlight %}
 
@@ -56,6 +56,6 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    connection.BulkUpdate(invoices).ThenBulkUpdate(x => x.Items);
+    connection.BulkUpdate(invoices, x => x.Items);
 }
 {% endhighlight %}
