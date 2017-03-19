@@ -13,7 +13,7 @@ Dapper support the transaction and TransactionScope
 
 Begin a new transaction from the connection and pass it in the transaction optional parameter.
 
-```csharp
+{% highlight csharp %}
 var sql = "Invoice_Insert";
 
 using (var connection = My.ConnectionFactory())
@@ -30,13 +30,13 @@ using (var connection = My.ConnectionFactory())
 		transaction.Commit();
 	}
 }
-```
+{% endhighlight %}
 
 ## TransactionScope
 
 Begin a new transaction scope before starting the connection
 
-```csharp
+{% highlight csharp %}
 // using System.Transactions;
 
 using (var transaction = new TransactionScope())
@@ -54,4 +54,4 @@ using (var transaction = new TransactionScope())
 
 	transaction.Complete();
 }
-```
+{% endhighlight %}
