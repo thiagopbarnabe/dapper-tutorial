@@ -43,6 +43,22 @@ Dapper Plus extend your IDbConnection interface with multiple methods:
 - [Bulk Merge](/bulk-merge)
 
 {% highlight csharp %}
-example
+// Bulk Insert
+connection.BulkInsert(invoices)
+	.ThenForEach(x => x.Items.ForEach(y => y.InvoiceID = x.InvoiceID))
+	.ThenBulkInsert(x => x.Items);
+  
+// Bulk Update
+connection.BulkUpdate(invoices, x => x.Items);
+
+// Bulk Delete
+connection.BulkDelete(invoices.SelectMany(x => x.Items))
+	.BulkDelete(invoices);
+
+// Bulk Merge
+connection.BulkMerge(invoices)
+	.ThenForEach(x => x.Items.ForEach(y => y.InvoiceID = x.InvoiceID))
+	.ThenBulkMerge(x => x.Items);
+  
 {% endhighlight %}
 
