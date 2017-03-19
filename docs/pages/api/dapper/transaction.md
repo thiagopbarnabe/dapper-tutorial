@@ -14,13 +14,18 @@ Dapper support the transaction and TransactionScope
 Begin a new transaction from the connection and pass it in the transaction optional parameter.
 
 ```csharp
+var sql = "Invoice_Insert";
+
 using (var connection = My.ConnectionFactory())
 {
 	connection.Open();
 
 	using (var transaction = connection.BeginTransaction())
 	{
-		var affectedRows = connection.Execute(My.SqlText.InvoiceInsert, new { Code = "Single_Insert_1" }, commandType: CommandType.StoredProcedure, transaction: transaction);
+		var affectedRows = connection.Execute(sql,
+			new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+			commandType: CommandType.StoredProcedure,
+			transaction: transaction);
 
 		transaction.Commit();
 	}
@@ -36,11 +41,17 @@ Begin a new transaction scope before starting the connection
 
 using (var transaction = new TransactionScope())
 {
+	var sql = "Invoice_Insert";
+
 	using (var connection = My.ConnectionFactory())
 	{
 		connection.Open();
 
-		var affectedRows = connection.Execute(My.SqlText.InvoiceInsert, new { Code = "Single_Insert_1" }, commandType: CommandType.StoredProcedure);
+		var affectedRows = connection.Execute(sql,
+			new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+			commandType: CommandType.StoredProcedure);
 	}
+
+	transaction.Complete();
 }
 ```
