@@ -9,15 +9,43 @@ permalink: stored-procedure
 ## Description
 Using Stored Procedure in Dapper is very easy, you simply need to specify the command type
 
-```csharp
-string sql = "EXEC Invoice_Insert";
+### Execute Single
+Execute a Stored Procedure a single time.
+
+{% highlight csharp %}
+var sql = "Invoice_Insert";
 
 using (var connection = My.ConnectionFactory())
 {
-    connection.Open();
+	connection.Open();
 
-    var affectedRows = connection.Execute(sql, new { Code = "Single_Insert_1" }, commandType: CommandType.StoredProcedure);
+	var affectedRows = connection.Execute(sql,
+		new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+		commandType: CommandType.StoredProcedure);
 
-    My.Result.Show(affectedRows);
+	My.Result.Show(affectedRows);
 }
-```
+{% endhighlight %}
+
+### Execute Many
+Execute a Stored Procedure multiple times.
+{% highlight csharp %}
+var sql = "Invoice_Insert";
+
+using (var connection = My.ConnectionFactory())
+{
+	connection.Open();
+
+	var affectedRows = connection.Execute(sql,
+		new[]
+		{
+			new {Kind = InvoiceKind.WebInvoice, Code = "Many_Insert_1"},
+			new {Kind = InvoiceKind.WebInvoice, Code = "Many_Insert_2"},
+			new {Kind = InvoiceKind.StoreInvoice, Code = "Many_Insert_3"}
+		},
+		commandType: CommandType.StoredProcedure
+	);
+
+	My.Result.Show(affectedRows);
+}
+{% endhighlight %}
