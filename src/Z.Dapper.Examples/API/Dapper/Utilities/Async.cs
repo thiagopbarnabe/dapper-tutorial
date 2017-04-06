@@ -122,7 +122,7 @@ namespace Z.Dapper.Examples.API.Dapper.Utilities
         {
             My.Database.Reset();
 
-            var sql = My.SqlText.Invoice_ThenItem_Select_ByKind;
+            var sql = My.SqlText.Invoice_Select_Then_Item_Select;
 
             using (var connection = My.ConnectionFactory())
             {
