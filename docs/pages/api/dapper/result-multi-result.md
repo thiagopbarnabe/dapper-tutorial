@@ -7,7 +7,7 @@ permalink: result-multi-result
 {% include template-h1.html %}
 
 ## Description
-Execute multiple queries within the same command and map results.
+QueryMultiple method is an extension method which can be called from any object of type IDbConnection. It can execute multiple queries within the same command and map results.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID; SELECT * FROM InvoiceItem WHERE InvoiceID = @InvoiceID;";

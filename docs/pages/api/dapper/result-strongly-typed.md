@@ -7,7 +7,7 @@ permalink: result-strongly-typed
 {% include template-h1.html %}
 
 ## Description
-Execute a query method and map the result using strongly typed.
+Extension methods can be used to execute a query and map the result using strongly typed.
 
 The anonymous result can be mapped from following methods:
 
@@ -17,8 +17,9 @@ The anonymous result can be mapped from following methods:
 - [QuerySingle](#example---querysingle)
 - [QuerySingleOrDefault](#example---querysingleordefault)
 
+These extension methods can be called from any object of type IDbConnection.
 ## Example - Query
-Execute a query and map the result to a strongly typed list.
+Query method can execute a query and map the result to a strongly typed list.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice;";
@@ -32,7 +33,7 @@ using (var connection = My.ConnectionFactory())
 {% endhighlight %}
 
 ## Example - QueryFirst
-Execute a query and map the first result to a strongly typed list.
+QueryFirst method can execute a query and map the first result to a strongly typed list.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
@@ -46,7 +47,7 @@ using (var connection = My.ConnectionFactory())
 {% endhighlight %}
 
 ## Example - QueryFirstOrDefault
-Execute a query and map the first result to a strongly typed list, or a default value if the sequence contains no elements.
+QueryFirstOrDefault method can execute a query and map the first result to a strongly typed list, or a default value if the sequence contains no elements.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
@@ -60,7 +61,7 @@ using (var connection = My.ConnectionFactory())
 {% endhighlight %}
 
 ## Example - QuerySingle
-Execute a query and map the first result to a strongly typed list, and throws an exception if there is not exactly one element in the sequence.
+QuerySingle method can execute a query and map the first result to a strongly typed list, and throws an exception if there is not exactly one element in the sequence.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";
@@ -74,7 +75,7 @@ using (var connection = My.ConnectionFactory())
 {% endhighlight %}
 
 ## Example - QuerySingleOrDefault
-Execute a query and map the first result to a strongly typed list, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.
+QuerySingleOrDefault method can execute a query and map the first result to a strongly typed list, or a default value if the sequence is empty; this method throws an exception if there is more than one element in the sequence.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice WHERE InvoiceID = @InvoiceID;";

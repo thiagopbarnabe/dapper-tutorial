@@ -7,11 +7,14 @@ permalink: execute
 {% include template-h1.html %}
 
 ## Description
-Execute a command one or multiple times and return the number of affected rows. This method is usually used to execute:
+Execute is an extension method which can be called from any object of type IDbConnection. It can execute a command one or multiple times and return the number of affected rows. This method is usually used to execute:
 - [Stored Procedure](#example---execute-stored-procedure)
 - [INSERT statement](#example---execute-insert)
 - [UPDATE statement](#example---execute-update)
 - [DELETE statement](#example---execute-delete)
+
+### Parameters
+The following table shows different parameter of an Execute method.
 
 | Name | Description |
 | :--- | :---------- |
@@ -33,11 +36,15 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(sql, new { Code = "Single_Insert_1" }, commandType: CommandType.StoredProcedure);
+    var affectedRows = connection.Execute(sql,
+        new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"},
+        commandType: CommandType.StoredProcedure);
 
     My.Result.Show(affectedRows);
 }
 {% endhighlight %}
+
+<img src="images/3-anonynous-entity.png" alt="Stored Procedure Single" />
 
 ### Many
 Execute the Stored Procedure multiple times. Once for every object in the array list.
@@ -52,9 +59,9 @@ using (var connection = My.ConnectionFactory())
     var affectedRows = connection.Execute(sql,
         new[]
         {
-            new {Code = "Many_Insert_1"},
-            new {Code = "Many_Insert_2"},
-            new {Code = "Many_Insert_3"}
+            new {Kind = InvoiceKind.WebInvoice, Code = "Many_Insert_1"},
+            new {Kind = InvoiceKind.WebInvoice, Code = "Many_Insert_2"},
+            new {Kind = InvoiceKind.StoreInvoice, Code = "Many_Insert_3"}
         },
         commandType: CommandType.StoredProcedure
     );
@@ -75,7 +82,9 @@ using (var connection = My.ConnectionFactory())
 {
     connection.Open();
 
-    var affectedRows = connection.Execute(sql, new {Code = "Single_Insert_1"});
+    var affectedRows = connection.Execute(sql, new {Kind = InvoiceKind.WebInvoice, Code = "Single_Insert_1"});
+
+    My.Result.Show(affectedRows);
 }
 {% endhighlight %}
 
@@ -92,11 +101,13 @@ using (var connection = My.ConnectionFactory())
     var affectedRows = connection.Execute(sql,
         new[]
         {
-            new {Code = "Many_Insert_1"},
-            new {Code = "Many_Insert_2"},
-            new {Code = "Many_Insert_3"}
+            new {Kind = InvoiceKind.WebInvoice, Code = "Many_Insert_1"},
+            new {Kind = InvoiceKind.WebInvoice, Code = "Many_Insert_2"},
+            new {Kind = InvoiceKind.StoreInvoice, Code = "Many_Insert_3"}
         }
     );
+
+    My.Result.Show(affectedRows);
 }
 {% endhighlight %}
 
@@ -113,6 +124,8 @@ using (var connection = My.ConnectionFactory())
     connection.Open();
 
     var affectedRows = connection.Execute(sql, new {InvoiceID = 1, Code = "Single_Update_1"});
+
+    My.Result.Show(affectedRows);
 }
 {% endhighlight %}
 
@@ -133,6 +146,8 @@ using (var connection = My.ConnectionFactory())
             new {InvoiceID = 2, Code = "Many_Update_2"},
             new {InvoiceID = 3, Code = "Many_Update_3"}
         });
+
+    My.Result.Show(affectedRows);
 }
 {% endhighlight %}
 
@@ -149,6 +164,8 @@ using (var connection = My.ConnectionFactory())
     connection.Open();
 
     var affectedRows = connection.Execute(sql, new {InvoiceID = 1});
+
+    My.Result.Show(affectedRows);
 }
 {% endhighlight %}
 

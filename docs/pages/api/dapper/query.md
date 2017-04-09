@@ -7,7 +7,7 @@ permalink: query
 {% include template-h1.html %}
 
 ## Description
-Execute a query and map the result.
+Query method is an extension method which can be called from any object of type IDbConnection. It can execute a query and map the result.
 
 The result can be mapped to:
 
@@ -18,6 +18,7 @@ The result can be mapped to:
 - [Multi-Type](#example---query-multi-type)
 
 ### Parameters
+The following table shows different parameter of an Query method.
 
 | Name | Description |
 | :--- | :---------- |
@@ -29,7 +30,7 @@ The result can be mapped to:
 | commandType    | The command type (default = null) |
 
 ## Example - Query Anonymous
-Execute a query and map the result to a dynamic list.
+Raw SQL query can be executed using Query method and map the result to a dynamic list.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice;";
@@ -39,11 +40,14 @@ using (var connection = My.ConnectionFactory())
     connection.Open();
 
     var invoices = connection.Query(sql).ToList();
+    
+    My.Result.Show(invoices);
 }
 {% endhighlight %}
+<img src="images/3-anonynous-entity.png" alt="Query Anonymous" />
 
 ## Example - Query Strongly Typed
-Execute a query and map the result to a strongly typed list.
+Raw SQL query can be executed using Query method and map the result to a strongly typed list.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice;";
@@ -53,11 +57,14 @@ using (var connection = My.ConnectionFactory())
     connection.Open();
 
     var invoices = connection.Query<Invoice>(sql).ToList();
+    
+    My.Result.Show(invoices);
 }
 {% endhighlight %}
+<img src="images/3-invoices.png" alt="Query Strongly Typed" />
 
 ## Example - Query Multi-Mapping (One to One)
-Execute a query and map the result to a strongly typed list with a one to one relation.
+Raw SQL query can be executed using Query method and map the result to a strongly typed list with a one to one relation.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice AS A INNER JOIN InvoiceDetail AS B ON A.InvoiceID = B.InvoiceID;";
@@ -76,11 +83,14 @@ using (var connection = My.ConnectionFactory())
             splitOn: "InvoiceID")
         .Distinct()
         .ToList();
+        
+    My.Result.Show(invoices);
 }
 {% endhighlight %}
+<img src="images/3-invoices-included-invoicedetail.png" alt="One to One" />
 
 ## Example - Query Multi-Mapping (One to Many)
-Execute a query and map the result to a strongly typed list with a one to many relations.
+Raw SQL query can be executed using Query method and map the result to a strongly typed list with a one to many relations.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice AS A INNER JOIN InvoiceItem AS B ON A.InvoiceID = B.InvoiceID;";
@@ -110,11 +120,14 @@ using (var connection = My.ConnectionFactory())
             splitOn: "InvoiceID")
         .Distinct()
         .ToList();
+        
+    My.Result.Show(invoices);
 }
 {% endhighlight %}
+<img src="images/3-invoices-included-invoiceitem.png" alt="One to Many" />
 
 ## Example - Query Multi-Type
-Execute a query and map the result to a list of different types.
+Raw SQL query can be executed using Query method and map the result to a list of different types.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice;";
@@ -149,5 +162,8 @@ using (var connection = My.ConnectionFactory())
             invoices.Add(invoice);
         }
     }
+    
+    My.Result.Show(invoices);
 }
 {% endhighlight %}
+<img src="images/3-invoices-with-storeinvoice-webinvoice.png" alt="Query Multi-Type" />

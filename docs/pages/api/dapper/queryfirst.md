@@ -7,7 +7,7 @@ permalink: queryfirst
 {% include template-h1.html %}
 
 ## Description
-Execute a query and map the first result.
+QueryFirst method is an extension method which can be called from any object of type IDbConnection. It can execute a query and map the first result.
 
 The result can be mapped to:
 
@@ -15,6 +15,7 @@ The result can be mapped to:
 - [Strongly Typed](#example---query-strongly-typed)
 
 ### Parameters
+The following table shows different parameter of an QueryFirst method.
 
 | Name | Description |
 | :--- | :---------- |

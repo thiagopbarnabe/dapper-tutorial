@@ -7,9 +7,15 @@ permalink: dapper
 {% include template-h1.html %}
 
 ## What's Dapper?
-Dapper is a simple object mapper for .NET and own the title of **King of Micro ORM**
+Dapper is a simple object mapper for .NET and own the title of **King of Micro ORM** in terms of speed and is virtually as fast as using a raw ADO.NET data reader. An ORM is an Object Relational Mapper, which is responsible for mapping between database and programming language.
 
 Dapper extend the IDbConnection by providing useful extension methods to query your database.
+
+## How Dapper Works?
+It is a three step process.
+- Create an IDbConnection object.
+- Write a query to perform CRUD operations.
+- Pass query as a parameter in Execute method. 
 
 ## Installation
 Dapper is installed through NuGet: <a href="https://www.nuget.org/packages/Dapper" target="_blank">https://www.nuget.org/packages/Dapper</a>

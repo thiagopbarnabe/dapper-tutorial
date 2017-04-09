@@ -7,14 +7,15 @@ permalink: result-multi-mapping
 {% include template-h1.html %}
 
 ## Description
-Execute a query and map the result to a strongly typed list with relations.
+Extension methods can be used to execute a query and map the result to a strongly typed list with relations.
 
 The relation can be either:
 - [One to One](#example---query-multi-mapping-one-to-one)
 - [One to Many](#example---query-multi-mapping-one-to-many)
 
+These extension methods can be called from any object of type IDbConnection.
 ## Example - Query Multi-Mapping (One to One)
-Execute a query and map the result to a strongly typed list with a one to one relation.
+Query method can execute a query and map the result to a strongly typed list with a one to one relation.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice AS A INNER JOIN InvoiceDetail AS B ON A.InvoiceID = B.InvoiceID;";
@@ -37,7 +38,7 @@ using (var connection = My.ConnectionFactory())
 {% endhighlight %}
 
 ## Example - Query Multi-Mapping (One to Many)
-Execute a query and map the result to a strongly typed list with a one to many relations.
+Query method can execute a query and map the result to a strongly typed list with a one to many relations.
 
 {% highlight csharp %}
 string sql = "SELECT * FROM Invoice AS A INNER JOIN InvoiceItem AS B ON A.InvoiceID = B.InvoiceID;";

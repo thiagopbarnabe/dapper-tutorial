@@ -7,7 +7,7 @@ permalink: queryfirstordefault
 {% include template-h1.html %}
 
 ## Description
-Execute a query and map the first result, or a default value if the sequence contains no elements.
+QueryFirstOrDefault method is an extension method which can be called from any object of type IDbConnection. It can execute a query and map the first result, or a default value if the sequence contains no elements.
 
 The result can be mapped to:
 
@@ -15,6 +15,7 @@ The result can be mapped to:
 - [Strongly Typed](#example---query-strongly-typed)
 
 ### Parameters
+The following table shows different parameter of an QueryFirstOrDefault method.
 
 | Name | Description |
 | :--- | :---------- |
