@@ -77,6 +77,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.uiDapper_vs_EF_Query = new System.Windows.Forms.Button();
+            this.uiDapper_vs_EF_Insert = new System.Windows.Forms.Button();
+            this.uiDapper_vs_EF_Update = new System.Windows.Forms.Button();
+            this.uiDapper_vs_EF_Delete = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.uiDapperApiGroup.SuspendLayout();
             this.uiDapperApi_ResultTypeGroup.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -87,6 +93,8 @@
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiDapperApiGroup
@@ -608,11 +616,75 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "- Ensure the script table-create.sql has been executed in the database";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.uiDapper_vs_EF_Delete);
+            this.groupBox6.Controls.Add(this.uiDapper_vs_EF_Update);
+            this.groupBox6.Controls.Add(this.uiDapper_vs_EF_Insert);
+            this.groupBox6.Controls.Add(this.uiDapper_vs_EF_Query);
+            this.groupBox6.Location = new System.Drawing.Point(6, 19);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(140, 150);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Dapper vs Entity Framework";
+            // 
+            // uiDapper_vs_EF_Query
+            // 
+            this.uiDapper_vs_EF_Query.Location = new System.Drawing.Point(5, 30);
+            this.uiDapper_vs_EF_Query.Name = "uiDapper_vs_EF_Query";
+            this.uiDapper_vs_EF_Query.Size = new System.Drawing.Size(130, 23);
+            this.uiDapper_vs_EF_Query.TabIndex = 1;
+            this.uiDapper_vs_EF_Query.Text = "Query";
+            this.uiDapper_vs_EF_Query.UseVisualStyleBackColor = true;
+            this.uiDapper_vs_EF_Query.Click += new System.EventHandler(this.ShowExample_Click);
+            // 
+            // uiDapper_vs_EF_Insert
+            // 
+            this.uiDapper_vs_EF_Insert.Location = new System.Drawing.Point(5, 60);
+            this.uiDapper_vs_EF_Insert.Name = "uiDapper_vs_EF_Insert";
+            this.uiDapper_vs_EF_Insert.Size = new System.Drawing.Size(130, 23);
+            this.uiDapper_vs_EF_Insert.TabIndex = 2;
+            this.uiDapper_vs_EF_Insert.Text = "Insert";
+            this.uiDapper_vs_EF_Insert.UseVisualStyleBackColor = true;
+            this.uiDapper_vs_EF_Insert.Click += new System.EventHandler(this.ShowExample_Click);
+            // 
+            // uiDapper_vs_EF_Update
+            // 
+            this.uiDapper_vs_EF_Update.Location = new System.Drawing.Point(5, 90);
+            this.uiDapper_vs_EF_Update.Name = "uiDapper_vs_EF_Update";
+            this.uiDapper_vs_EF_Update.Size = new System.Drawing.Size(130, 23);
+            this.uiDapper_vs_EF_Update.TabIndex = 3;
+            this.uiDapper_vs_EF_Update.Text = "Update";
+            this.uiDapper_vs_EF_Update.UseVisualStyleBackColor = true;
+            this.uiDapper_vs_EF_Update.Click += new System.EventHandler(this.ShowExample_Click);
+            // 
+            // uiDapper_vs_EF_Delete
+            // 
+            this.uiDapper_vs_EF_Delete.Location = new System.Drawing.Point(5, 120);
+            this.uiDapper_vs_EF_Delete.Name = "uiDapper_vs_EF_Delete";
+            this.uiDapper_vs_EF_Delete.Size = new System.Drawing.Size(130, 23);
+            this.uiDapper_vs_EF_Delete.TabIndex = 4;
+            this.uiDapper_vs_EF_Delete.Text = "Delete";
+            this.uiDapper_vs_EF_Delete.UseVisualStyleBackColor = true;
+            this.uiDapper_vs_EF_Delete.Click += new System.EventHandler(this.ShowExample_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.groupBox6);
+            this.groupBox7.Location = new System.Drawing.Point(650, 90);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(150, 180);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Performance Comparison";
+            // 
             // StartupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 511);
+            this.ClientSize = new System.Drawing.Size(896, 511);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -632,6 +704,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -688,6 +762,12 @@
         private System.Windows.Forms.Button uiBuffered;
         private System.Windows.Forms.Button uiAsync;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button uiDapper_vs_EF_Delete;
+        private System.Windows.Forms.Button uiDapper_vs_EF_Update;
+        private System.Windows.Forms.Button uiDapper_vs_EF_Insert;
+        private System.Windows.Forms.Button uiDapper_vs_EF_Query;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }
 

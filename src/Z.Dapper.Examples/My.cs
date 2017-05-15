@@ -10,6 +10,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using Z.Dapper.Plus;
 
@@ -119,9 +120,30 @@ DBCC CHECKIDENT (Invoice, RESEED, 0)
                 }
             }
         }
+        public static class AppSettings
+        {
+            public static int NbTestItems = Convert.ToInt32(ConfigurationManager.AppSettings["NbTestItems"]);
+        }
 
         public static class Result
         {
+            public static void Show(Form form, object button, Stopwatch clock, int nbItems)
+            {
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine("Form: " + form.Text);
+                sb.AppendLine("Example: " + ((Button)button).Text);
+
+                if (nbItems != -1)
+                {
+                    sb.AppendLine("Rows Affected: " + nbItems);
+                }
+
+                sb.AppendLine("Elapsed Milliseconds: " + clock.Elapsed.TotalMilliseconds);
+
+                MessageBox.Show(sb.ToString(), @"Result");
+            }
+
             public static void Show(object result)
             {
                 if (result is Invoice || result is InvoiceContrib)

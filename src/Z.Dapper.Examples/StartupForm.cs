@@ -147,6 +147,21 @@ namespace Z.Dapper.Examples.API.Dapper.Methods
                 case "uiData_Annotation_Computed":
                     form = new Computed();
                     break;
+
+                // Performance Comparison
+                case "uiDapper_vs_EF_Query":
+                    form = new Performance_Comparison.Dapper_vs_EF6.Query();
+                    break;
+                case "uiDapper_vs_EF_Insert":
+                    form = new Performance_Comparison.Dapper_vs_EF6.Insert();
+                    break;
+                case "uiDapper_vs_EF_Update":
+                    form = new Performance_Comparison.Dapper_vs_EF6.Update();
+                    break;
+                case "uiDapper_vs_EF_Delete":
+                    form = new Performance_Comparison.Dapper_vs_EF6.Delete();
+                    break;
+
                 default:
                     throw new Exception("Invalid Button Name");
             }
