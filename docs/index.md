@@ -54,6 +54,7 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 			</p>
 		</div>
 	</div>
+	<!--
 	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">FAQ</h2>
@@ -87,4 +88,5 @@ src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 			</p>
 		</div>
 	</div>
+	!-->
 </div>
