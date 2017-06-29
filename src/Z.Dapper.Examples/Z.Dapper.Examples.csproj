@@ -194,13 +194,11 @@
       <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Z.Dapper.Plus, Version=1.0.23.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Z.Dapper.Plus.1.0.23\lib\net45\Z.Dapper.Plus.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Z.Dapper.Plus, Version=1.1.5.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Dapper.Plus.1.1.5\lib\net45\Z.Dapper.Plus.dll</HintPath>
     </Reference>
-    <Reference Include="Z.EntityFramework.Extensions, Version=3.11.20.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Z.EntityFramework.Extensions.3.11.20\lib\net45\Z.EntityFramework.Extensions.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Z.EntityFramework.Extensions, Version=3.12.9.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Extensions.3.12.9\lib\net45\Z.EntityFramework.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -415,28 +413,28 @@
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="ExceptionMessage.cs" />
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Delete.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Delete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Delete.Designer.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Insert.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Insert.Designer.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Insert.Designer.cs">
       <DependentUpon>Insert.cs</DependentUpon>
     </Compile>
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Query.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Query.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Query.Designer.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Query.Designer.cs">
       <DependentUpon>Query.cs</DependentUpon>
     </Compile>
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Update.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Performance_Comparison\Dapper_vs_EF6\Update.Designer.cs">
+    <Compile Include="_draft\Dapper_vs_EF6\Update.Designer.cs">
       <DependentUpon>Update.cs</DependentUpon>
     </Compile>
     <Compile Include="StartupForm.cs">
@@ -563,16 +561,16 @@
     <EmbeddedResource Include="API\Dapper\Utilities\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Performance_Comparison\Dapper_vs_EF6\Delete.resx">
+    <EmbeddedResource Include="_draft\Dapper_vs_EF6\Delete.resx">
       <DependentUpon>Delete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Performance_Comparison\Dapper_vs_EF6\Insert.resx">
+    <EmbeddedResource Include="_draft\Dapper_vs_EF6\Insert.resx">
       <DependentUpon>Insert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Performance_Comparison\Dapper_vs_EF6\Query.resx">
+    <EmbeddedResource Include="_draft\Dapper_vs_EF6\Query.resx">
       <DependentUpon>Query.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Performance_Comparison\Dapper_vs_EF6\Update.resx">
+    <EmbeddedResource Include="_draft\Dapper_vs_EF6\Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartupForm.resx">
