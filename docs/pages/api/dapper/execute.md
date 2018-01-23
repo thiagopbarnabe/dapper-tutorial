@@ -50,7 +50,7 @@ using (var connection = My.ConnectionFactory())
 Execute the Stored Procedure multiple times. Once for every object in the array list.
 
 {% highlight csharp %}
-string sql = "EXEC Invoice_Insert";
+string sql = "Invoice_Insert";
 
 using (var connection = My.ConnectionFactory())
 {
