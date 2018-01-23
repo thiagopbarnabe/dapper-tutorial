@@ -30,7 +30,7 @@ The following table shows different parameter of an Execute method.
 Execute the Stored Procedure a single time.
 
 {% highlight csharp %}
-string sql = "EXEC Invoice_Insert";
+string sql = "Invoice_Insert";
 
 using (var connection = My.ConnectionFactory())
 {
