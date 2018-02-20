@@ -54,14 +54,22 @@ namespace Z.Dapper.Examples.API.Dapper.Result
             {
                 connection.Open();
 
+                /*cria um dicionario para manter o controle dos invoices encontrados
+                 * desta forma para cada linha que eu receber dentro da função eu posso adicionar seus 
+                 * respectivos items caso contrario cada linha nova criaria um novo invoice */
                 var invoiceDictionary = new Dictionary<int, Invoice>();
 
+                /*os primeiros parametros indicam os tipos de entidade que voce quer que o dapper mapeie
+                 * o ultimo parametro indica o tipo que voce vai retornar da query */
                 var invoices = connection.Query<Invoice, InvoiceItem, Invoice>(
                         sql,
+                        //essa func vai rodar para cada linha encontrada pela query
                         (invoice, invoiceItem) =>
                         {
                             Invoice invoiceEntry;
-
+                            
+                            /* caso eu ainda não tenha encontrado o invoice eu adiciono no dicionario para 
+                             * poder adicionar os items dele */                            
                             if (!invoiceDictionary.TryGetValue(invoice.InvoiceID, out invoiceEntry))
                             {
                                 invoiceEntry = invoice;
@@ -72,7 +80,14 @@ namespace Z.Dapper.Examples.API.Dapper.Result
                             invoiceEntry.Items.Add(invoiceItem);
                             return invoiceEntry;
                         },
-                        splitOn: "InvoiceItemID")
+                        /* The splitOn param needs to be specified as the split point, 
+                         * it defaults to Id. If there are multiple split points, 
+                         * you will need to add them in a comma delimited list.*/
+                        splitOn: "InvoiceItemID") 
+                    /* é necessario o distinct porque sem ele a query vai retornar a lista 
+                     * com itens repetidos porque para cada linha do banco de dados 
+                     * ele entra dentro da rotina e cada vez que ele entra na rotina 
+                     * ele retorna uma propriedade no caso um invoice*/
                     .Distinct()
                     .ToList();
 
